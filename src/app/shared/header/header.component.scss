@@ -1,0 +1,13 @@
+section{
+    img{
+
+    }
+    ul{
+        list-style:none;
+        display:flex;
+        gap:10em;
+        &:hover{
+            cursor:pointer;
+        }
+    }
+}
