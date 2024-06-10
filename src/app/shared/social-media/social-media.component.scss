@@ -1,0 +1,16 @@
+.socialMedia{
+    position:absolute;
+    ul{
+        list-style:none;
+        display:flex;
+        flex-direction: column;
+        gap:25px;
+        li{
+  
+            img{
+                width:40px;
+                height:40px;
+            }
+        }
+    }
+}
