@@ -1,15 +1,14 @@
-.socialMedia{
-    position:absolute;
-    ul{
-        list-style:none;
-        display:flex;
-        flex-direction: column;
-        gap:25px;
-        li{
-  
-            img{
-                width:40px;
-                height:40px;
+.socialMedia {
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    transition: transform 1s ease;
+
+    a {
+        img {
+            &:hover {
+                cursor: pointer;
+                transform: translatex(-10px)
             }
         }
     }
