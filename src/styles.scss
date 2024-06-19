@@ -186,8 +186,12 @@
 
   body{
     margin:0;
-    width:1440px;
-    max-width:1440px;
+    // width:1440px;
+    // max-width:1440px;
     scroll-behavior: smooth;
     font-family: 'Baloo 2', sans-serif;
+  }
+
+  .main-font-color{
+    color: #5988FF;
   }

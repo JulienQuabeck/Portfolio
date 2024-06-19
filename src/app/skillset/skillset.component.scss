@@ -1,0 +1,25 @@
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(135deg, #a0bbff 0%, #5988FF 10%);
+    margin-top:40px;
+    padding-bottom:40px;
+    padding-left:40px;
+    padding-right:40px;
+}
+
+.skillset-headline{
+    color:white;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight:400;
+    font-size:96px;
+}
+
+.skills-container{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
