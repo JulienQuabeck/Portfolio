@@ -1,40 +1,85 @@
-.title-and-description{
-    h1{
-        color:#5988FF;
-        font-weight:400;
-        font-size:96px;
+section {
+    padding-bottom: 120px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.title-and-description {
+    h1 {
+        color: #5988FF;
+        font-weight: 400;
+        font-size: 96px;
     }
-    div{
+
+    div {
         font-family: 'montserrat', sans-serif;
-        font-weight:400;
-        font-size:23px;
+        font-weight: 400;
+        font-size: 23px;
     }
 }
 
-.skill-title{
-    color:#5988FF;
-    font-weight:400;
-    font-size:45px;
+.reverse {
+    flex-direction: row-reverse;
 }
 
-.skill-enumeration{
-    color:#5988FF;
-    font-weight:400;
-    font-size:23px;
+.align-flex-end {
+    align-items: flex-end;
 }
 
-.skill-description{
+.table-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+.single-project {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+
+    div {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}
+
+
+.skill-title {
+    color: #5988FF;
+    font-weight: 400;
+    font-size: 45px;
+}
+
+.skill-enumeration {
+    color: #5988FF;
+    font-weight: 400;
+    font-size: 23px;
+}
+
+.skill-description {
     font-family: 'montserrat', sans-serif;
-    font-weight:400;
-    font-size:16px;
+    font-weight: 400;
+    font-size: 16px;
 }
 
-.git-button{
-    color:#5988FF;
-    border:2px solid #5988FF;
-    border-radius:10px;
+.git-button {
+    color: #5988FF;
+    border: 2px solid #5988FF;
+    border-radius: 10px;
 
-    &:hover{
-        cursor:pointer;
+    &:hover {
+        cursor: pointer;
     }
+}
+
+.ellipse1 {
+    position:absolute;
+    width: 108.75px;
+    height: 108.75px;
 }

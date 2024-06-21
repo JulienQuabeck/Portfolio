@@ -11,26 +11,16 @@ export class MyWorkComponent {
 
 projects = [
   {
-    title: 'join',
+    title: 'Join',
     img: '../../assets/img/projects/join.png',
-    skills: {
-      skill1:'HTML',
-      skill2:'SCSS',
-      skill3:'Angular',
-      skill4:'TypeScript',
-      skill5:'Firebase',
-    },
+    skills: 'HTML | SCSS | Angular | TypeScript | Firebase',
     desciption: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
     git: 'www.test.de'
   },
   {
     title: 'El Pollo Loco',
     img: '../../assets/img/projects/epl.png',
-    skills: {
-      skill1:'HTML',
-      skill2:'SCSS',
-      skill3:'Javascript',
-    },
+    skills: 'HTML | CSS | Javascript',
     desciption: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
     git: 'www.test.de'
   }

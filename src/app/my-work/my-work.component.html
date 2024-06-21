@@ -1,15 +1,32 @@
 <section>
     <div class="title-and-description">
-        <h1>My work</h1>
+        <h1>My work</h1>   
+        <img src="../../assets/img/Ellipse 9.png" class="ellipse1">
         <div>
-            Explore a selection of my work here - Interact with projects to see my skills in action.
+            Explore a selection of my work here - Interact with <br> projects to see my skills in action.
         </div>
     </div>
-    <div>
-        <table>
-            @for (project of projects; track projects){
-                
-            }
-        </table>
+    <div class="projects">
+        @for (project of projects; track projects; let index = $index){
+        @if(index % 2 !== 0){
+        <div class="single-project reverse">
+            <img src={{project.img}}>
+            <div class="align-flex-end">
+                <div class="skill-title">{{project.title}}</div>
+                <div class="skill-enumeration">{{project.skills}}</div>
+                <div class="skill-description">{{project.desciption}}</div>
+            </div>
+        </div>
+        }@else{
+        <div class="single-project">
+            <img src={{project.img}}>
+            <div>
+                <div class="skill-title">{{project.title}}</div>
+                <div class="skill-enumeration">{{project.skills}}</div>
+                <div class="skill-description">{{project.desciption}}</div>
+            </div>
+        </div>
+        }
+        }
     </div>
 </section>
