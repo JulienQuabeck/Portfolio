@@ -2,6 +2,7 @@ section {
     padding-bottom: 120px;
     padding-left: 40px;
     padding-right: 40px;
+    position: relative;
 }
 
 .title-and-description {
@@ -72,7 +73,17 @@ section {
     color: #5988FF;
     border: 2px solid #5988FF;
     border-radius: 10px;
-
+    width:137px;
+    height:65.36px;
+    padding:20px;
+    margin-top:20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    font-family: 'montserrat', sans-serif;
+    font-weight:400;
+    font-size:23px;
     &:hover {
         cursor: pointer;
     }
@@ -82,4 +93,41 @@ section {
     position:absolute;
     width: 108.75px;
     height: 108.75px;
+    top:-50px;
+    left:500px;
+}
+
+.ellipse2 {
+    position:absolute;
+    width: 183px;
+    height: 183px;
+    top:100px;
+    left:1000px;
+}
+
+.ellipse3 {
+    position:absolute;
+    width: 393.32px;
+    height: 393.32px;
+    top:500px;
+    left:-200px;
+    z-index:-100;
+}
+
+.ellipse4 {
+    position:absolute;
+    width: 652.16px;
+    height: 652.16px;
+    top:700px;
+    left:1100px;
+    z-index:-100;
+}
+
+.ellipse5 {
+    position:absolute;
+    width: 51px;
+    height: 51px;
+    top:1200px;
+    left:100px;
+    z-index:-100;
 }
