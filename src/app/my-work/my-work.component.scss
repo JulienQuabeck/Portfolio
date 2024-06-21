@@ -1,0 +1,40 @@
+.title-and-description{
+    h1{
+        color:#5988FF;
+        font-weight:400;
+        font-size:96px;
+    }
+    div{
+        font-family: 'montserrat', sans-serif;
+        font-weight:400;
+        font-size:23px;
+    }
+}
+
+.skill-title{
+    color:#5988FF;
+    font-weight:400;
+    font-size:45px;
+}
+
+.skill-enumeration{
+    color:#5988FF;
+    font-weight:400;
+    font-size:23px;
+}
+
+.skill-description{
+    font-family: 'montserrat', sans-serif;
+    font-weight:400;
+    font-size:16px;
+}
+
+.git-button{
+    color:#5988FF;
+    border:2px solid #5988FF;
+    border-radius:10px;
+
+    &:hover{
+        cursor:pointer;
+    }
+}

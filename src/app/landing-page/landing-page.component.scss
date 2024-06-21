@@ -27,7 +27,7 @@
     height: 61px;
     top: 227px;
     left: 731px;
-    gap: 0px;
+    gap: 0px;    
 }
 
 .title {
@@ -71,11 +71,18 @@
     width: 206px;
     height: 206px;
     bottom:-103px;
-    left: 50vw;
+    left: 50%;
 }
 
 app-social-media{
     position:absolute;
     right:200px;
     top:789px;
+}
+
+.me-img{
+    position:absolute;
+    bottom:-2px;
+    z-index:999;
+    transform: rotate(-0.8deg);
 }
