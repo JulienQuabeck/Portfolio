@@ -19,6 +19,14 @@ section {
         width: 617px;
         margin-bottom: 20px;
         padding: 10px 20px;
+
+        &:hover {
+            &:hover {
+                border: 2px solid #5988FF;
+                height: 180px;
+                width: 615px;
+            }
+        }
     }
 }
 
@@ -40,15 +48,21 @@ section {
 .right-container {
     display: flex;
     flex-direction: column;
+}
 
-    input {
-        border: 1px solid #5988FF;
-        border-radius: 10px;
-        padding: 15px 25px 15px 25px;
-        height: 30px;
-        width: 617px;
-        margin-bottom: 20px;
-        padding: 10px 20px;
+.input-hover {
+    border: 1px solid #5988FF;
+    border-radius: 10px;
+    padding: 15px 25px 15px 25px;
+    height: 30px;
+    width: 617px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+
+    &:hover {
+        border: 2px solid #5988FF;
+        height: 28px;
+        width: 615px;
     }
 }
 
@@ -57,15 +71,27 @@ section {
 }
 
 .checkbox {
-    width: 20px !important;
-    margin: 0 !important;
-    margin-right: 10px !important;
+    margin: 0;
+    margin-right: 10px;
+    -ms-transform: scale(1.5); /* IE */
+    -moz-transform: scale(1.5); /* FF */
+    -webkit-transform: scale(1.5); /* Safari and Chrome */
+    -o-transform: scale(1.5); /* Opera */
+    transform: scale(1.5);
+
+    &:hover{
+        cursor:pointer;
+    }
 }
 
 .privacy-policy-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    &:hover{
+        cursor:pointer;
+    }
 }
 
 .privacy-policy {
@@ -81,10 +107,11 @@ section {
 }
 
 .button-container {
-    margin-top:40px;
-    margin-bottom:80px;
-    display:flex;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    display: flex;
     justify-content: center;
+
     button {
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
@@ -96,10 +123,11 @@ section {
         border-radius: 10px;
         border: 2px solid gray;
         background-color: white;
-        box-shadow: 2px 2px 2px 1px #5988FF;
-        &:hover{
-            cursor:pointer;
-            box-shadow:inset 2px 2px 2px 1px #5988FF;
+
+        // box-shadow: 1px 1px 1px 0.5px #5988FF;
+        &:hover {
+            cursor: pointer;
+            // box-shadow: inset 1px 1px 1px 0.5px #5988FF;
         }
     }
 }
@@ -141,18 +169,20 @@ section {
     position: absolute;
     top: 700px;
     left: 31px;
-    &:hover{
-        cursor:pointer;
+
+    &:hover {
+        cursor: pointer;
     }
 }
 
-.arrow{
+.arrow {
     width: 19px;
     height: 19px;
     position: absolute;
     top: 710px;
     left: 41px;
-    &:hover{
-        cursor:pointer;
+
+    &:hover {
+        cursor: pointer;
     }
 }

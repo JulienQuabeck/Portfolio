@@ -5,6 +5,9 @@ section {
     justify-content: space-between;
     img {
         margin-left:36px;
+        &:hover{
+            cursor:pointer;
+        }
     }
 
     ul {
@@ -24,6 +27,15 @@ section {
             line-height: 27.6px;
             text-align: left;
             color: #5988FF;
+            width:130px;
+            a{
+                text-decoration:none;
+                color:#5988FF;
+
+                &:hover{
+                    font-weight:800;
+                }
+            }            
         }
     }
 }
