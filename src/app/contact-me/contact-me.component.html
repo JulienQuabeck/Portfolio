@@ -1,10 +1,15 @@
 <section>
     <img src="../../assets/img/Ellipse 9.png" class="ellipse1">
     <img src="../../assets/img/Ellipse 9.png" class="ellipse2">
-    <a href="#landing-page"><img src="../../assets/img/Ellipse 9.png" class="ellipse3"></a>
+
     <div class="arrow-container">
-        <img src="../../assets/img/arrow.png" class="arrow">
-        <img src="../../assets/img/arrow-hover.png" class="arrow display-none">
+        <a href="#landing-page" class="arrow">
+            <!-- <img src="../../assets/img/Ellipse 9.png" class="ellipse3"> -->
+            <!-- <img src="../../assets/img/arrow.png" class="arrow"> -->
+            <!-- <img src="../../assets/img/arrow-hover.png" class="arrow display-none"> -->
+        </a>
+
+
     </div>
 
     <h1>
@@ -18,18 +23,20 @@
             <p class="highlighted-text">Need a Frontend developer? <b>Contact me!</b></p>
         </div>
         <div class="right-container">
-            <input type="text" placeholder="Your Name" class="input-hover" required>
-            <input type="text" placeholder="Your email" class="input-hover" required>
-            <textarea placeholder="our message" class="input-hover" required></textarea>
-            <div class="privacy-policy-container">
-                <input class="checkbox" type="checkbox">
+
+
+            <input id="name" type="text" placeholder="Your Name" class="input-hover" required>
+            <input id="mail" type="email" placeholder="Your email" class="input-hover" required>
+            <textarea id="message" placeholder="Your message" class="input-hover" required></textarea>
+            <div class="privacy-policy-container" (click)=checkCheckbox()>
+                <input [(ngModel)]="checked" id="privacy-policy-checkbox" class="checkbox" type="checkbox">
                 <div class="privacy-policy">
                     I've read the <div>privacy policy</div> and agree to the processing of my
                     data as outlined.
                 </div>
             </div>
             <div class="button-container">
-                <button class="say-hello-button">Say hello ;)</button>
+                <button class="say-hello-button" disabled>Say hello ;)</button>
             </div>
         </div>
 

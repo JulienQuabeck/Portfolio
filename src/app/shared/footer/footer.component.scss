@@ -1,31 +1,46 @@
-section{
-    background-color:#5988FF;
+section {
+    background-color: #5988FF;
     background-image: linear-gradient(to right, #83a6ff 0%, #5988FF 100%);
-    display:flex;
+    display: flex;
     justify-content: space-around;
 
-    div{
-        display:flex;
+    div {
+        display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items:center;
-        a{
-            text-decoration:none;
-            color:black;
-            &:hover{
-                cursor:pointer;
+        align-items: center;
+        color: white;
+
+        a {
+            text-decoration: none;
+            color: white;
+            padding-bottom: 1px;
+            margin-top: 2px;
+
+            &:hover {
+                cursor: pointer;
+                border-bottom: 2px solid white;
+                margin-top: 0;
+                font-weight: bolder;
             }
         }
     }
 
-    .social-media{
-        display:flex;
-        flex-direction: row;
-        gap:30px;
-        img{
 
-            &:hover{
-                cursor:pointer;
+    .social-media {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+
+        img {
+            width: 30px;
+            padding-left: 5px;
+
+            &:hover {
+                cursor: pointer;
+                width: 35px;
+                height: 35px;
+                padding-left: 0;
             }
         }
 

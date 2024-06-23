@@ -60,7 +60,7 @@ section {
     padding: 10px 20px;
 
     &:hover {
-        cursor:pointer;
+        cursor: pointer;
         border: 2px solid #5988FF;
         height: 28px;
         width: 615px;
@@ -71,39 +71,69 @@ section {
     color: #5988FF;
 }
 
-.checkbox {
-    margin: 0;
-    margin-right: 10px;
-    -ms-transform: scale(1.5); /* IE */
-    -moz-transform: scale(1.5); /* FF */
-    -webkit-transform: scale(1.5); /* Safari and Chrome */
-    -o-transform: scale(1.5); /* Opera */
-    transform: scale(1.5);
+// .checkbox {
+//     margin: 0;
+//     margin-right: 10px;
+//     -ms-transform: scale(1.5);
+//     /* IE */
+//     -moz-transform: scale(1.5);
+//     /* FF */
+//     -webkit-transform: scale(1.5);
+//     /* Safari and Chrome */
+//     -o-transform: scale(1.5);
+//     /* Opera */
+//     transform: scale(1.5);
 
-    &:hover{
-        cursor:pointer;
-    }
-}
+//     &:hover {
+//         cursor: pointer;
+//     }
+// }
 
 .privacy-policy-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 
-    &:hover{
-        cursor:pointer;
+    input {
+        margin: 0;
+        margin-right: 10px;
+        -ms-transform: scale(1.5);
+        /* IE */
+        -moz-transform: scale(1.5);
+        /* FF */
+        -webkit-transform: scale(1.5);
+        /* Safari and Chrome */
+        -o-transform: scale(1.5);
+        /* Opera */
+        transform: scale(1.5);
     }
-}
-
-.privacy-policy {
-    display: flex;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
 
     div {
-        padding: 0px 4px;
-        color: #5988FF;
+        display: flex;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+
+        div {
+            padding: 0px 4px;
+            color: #5988FF;
+        }
+    }
+
+    &:hover {
+        cursor:default;
+        input{
+            cursor:pointer;
+            box-shadow: 0.1px 0.1px 3px 1px rgba(0, 0, 0, 0.459);
+            box-shadow: inset 0.1px 0.1px 3px 1px rgba(0, 0, 0, 0.459);
+        }
+
+        div {
+            div {
+                text-decoration: underline;
+                font-weight: bolder;
+            }
+        }
     }
 }
 
@@ -114,22 +144,44 @@ section {
     justify-content: center;
 
     button {
-        color:lightgray;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 23px;
-        width: 190px;
-        height: 58px;
-        padding: 15px 30px 15px 30px;
-        gap: 10px;
-        border-radius: 10px;
-        border: 2px solid lightgray;
-        background-color: white;
+        // color: lightgray;
+        // font-family: 'Montserrat', sans-serif;
+        // font-weight: 400;
+        // font-size: 23px;
+        // width: 190px;
+        // height: 58px;
+        // padding: 15px 30px 15px 30px;
+        // gap: 10px;
+        // border-radius: 10px;
+        // border: 2px solid lightgray;
+        // background-color: white;
 
-        // box-shadow: 1px 1px 1px 0.5px #5988FF;
+        color: #5988FF;
+        border: 2px solid #5988FF;
+        border-radius: 10px;
+        width:200px;
+        height:65px;
+        padding:20px;
+        margin-top:20px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background-color:white;
+        font-family: 'montserrat', sans-serif;
+        font-weight:400;
+        font-size:23px;
+        margin-bottom:20px;
         &:hover {
+            // cursor: pointer;
             cursor: pointer;
-            // box-shadow: inset 1px 1px 1px 0.5px #5988FF;
+            color:white;
+            border: 2px solid rgb(8, 73, 242);
+            background-image: linear-gradient(to right, #83a6ff 0%, rgb(8, 73, 242) 100%);
+            width:220px;
+            height:77px; 
+            margin-bottom:10px;
+            border-color:white;
+            margin-top:18px;
         }
     }
 }
@@ -178,17 +230,26 @@ section {
 }
 
 .arrow {
-    width: 19px;
-    height: 19px;
+    width: 39px;
+    height: 39px;
     position: absolute;
     top: 710px;
     left: 41px;
+    background-image: url('../../assets/img/arrow.png');
 
     &:hover {
         cursor: pointer;
+        background-image: url('../../assets/img/arrow-hover.png');
     }
 }
 
-.display-none{
-    display:none;
-}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
