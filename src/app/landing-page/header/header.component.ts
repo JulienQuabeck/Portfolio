@@ -9,4 +9,18 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  burgerMenuClosed = true;
+
+  openBurgerMenu(){
+    if(this.burgerMenuClosed == true){
+      this.burgerMenuClosed = false;
+      console.log(this.burgerMenuClosed);
+    }else{
+      this.burgerMenuClosed = true;
+      console.log(this.burgerMenuClosed);
+    }
+
+  }
+
+
 }

@@ -2,16 +2,7 @@
     position: relative;
     width: 99vw;
     height: 100vh;
-    background-image: linear-gradient(to bottom, white 0%, rgb(240, 239, 239) 90%)
-}
-
-.header {
-    position: absolute;
-    width: 100%;
-    height: 32px;
-    top: 42.5px;
-    gap: 36px;
-    opacity: 0px;
+    background-image: linear-gradient(to bottom, white 0%, rgb(240, 239, 239) 90%);
 }
 
 .name {
@@ -94,8 +85,8 @@ app-social-media {
 
 .me-img {
     position: absolute;
-    // bottom: -2px;
-    z-index: 999;
+    bottom: 60px;
+    z-index: 900;
     transform: rotate(-0.8deg);
 }
 
@@ -107,7 +98,7 @@ app-social-media {
 
     .me-img{
         transform:scale(0.9);
-        bottom:-65px;
+        bottom:60px;
     }
 }
 
@@ -124,7 +115,7 @@ app-social-media {
 @media(max-width: 1180px){
     .me-img{
         transform:scale(0.6);
-        bottom:-238px;
+        bottom:-116px;
     }
 
     .name{
@@ -179,6 +170,40 @@ app-social-media {
     }
 
     .me-img{
-        left:50%;
+        left:5%;
+    }
+
+    .name{
+        font-size:40px;
+        left:5%;
+        div{
+            font-size:80px;
+            line-height: 90px;
+        }
+    }
+}
+
+@media(max-width:700px){
+    .ellipseBehindPicture{
+        height:65vh;
+        width:125vw;
+    }
+
+    .name{
+        color:white;
+        text-shadow: -1px 0 #5988FF, 0 1px #5988FF, 1px 0 #5988FF, 0 -1px #5988FF;
+        font-size:30px;
+        div{
+            font-size:60px;
+        }
+    }
+}
+
+@media(max-width:610px){
+    .name{
+        font-size:20px;
+        div{
+            font-size:40px;
+        }
     }
 }

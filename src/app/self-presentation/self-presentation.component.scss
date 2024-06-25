@@ -9,24 +9,28 @@ section{
 .request{
     font-size: 121px;
     font-weight:400;
-    width:40vw;
+    width:50vw;
     display:flex;
     justify-content: center;
-    margin-right:5vw;
+    padding-left:5vw;
+    margin-right:1vw;
+    min-width:500px;
 }
 
 .self-presentation{
     font-family: 'montserrat', sans-serif;
     font-weight:400;
     font-size:23px;
-    width:40vw;
-    margin-left:5vw;
+    width:50vw;
 }
 
 .right-side-of-self-presentation{
     display:flex;
     flex-direction: column;
     align-items: center;
+    padding-right:5vw;
+    margin-left:1vw;
+    min-width:300px;
     div{
         button{
             margin-top:40px;
@@ -63,4 +67,55 @@ section{
     position:absolute;
     left:75%;
     top:15%;
+}
+
+@media(max-width:1041px){
+
+    .request{
+        padding-left:1vw;
+        min-width:0;
+    }
+
+    .right-side-of-self-presentation{
+        padding-right:1vw;
+
+    }
+
+    .self-presentation{
+        margin-right:5px;
+    }
+}
+
+@media(max-width:900px){
+    .request{
+        font-size:80px;
+    }
+}
+
+@media (max-width:840px){
+    section{
+        padding-top:150px;
+    }
+
+    .ellipse{
+        top:10%;
+    }
+}
+
+@media(max-width:650px){
+    #self-presentation{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .request{
+        margin-bottom:50px;
+    }
+}
+
+@media(max-width:370px){
+    .ellipse{
+        left:70%;
+        top:10%;
+    }
 }

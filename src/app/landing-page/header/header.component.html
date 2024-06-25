@@ -1,8 +1,25 @@
-<section>
+<section class="header">
     <img src="../../../assets/img/logo.png">
-    <ul>
-        <li><a href="#self-presentation">About me</a></li>
-        <li><a href="#skillset">Skill set</a></li>
-        <li><a href="#mywork">My work</a></li>
-    </ul>
+    <div class="normal-header">
+        <ul>
+            <li><a href="#self-presentation">About me</a></li>
+            <li><a href="#skillset">Skill set</a></li>
+            <li><a href="#mywork">My work</a></li>
+        </ul>
+    </div>
 </section>
+
+<div class="burger-menu">
+    <img src="../../../assets/img/burger_menu.png" [style.display]="burgerMenuClosed ? 'block' : 'none'"
+        (click)="openBurgerMenu()">
+    <div [style.display]="burgerMenuClosed ? 'none' : 'flex'">
+        <div>
+            <img src="../../../assets/img/burger_close.png" [style.display]="burgerMenuClosed ? 'none' : 'flex'"
+                (click)="openBurgerMenu()">
+        </div>
+        <a href="#self-presentation">About me</a>
+        <a href="#skillset">Skill set</a>
+        <a href="#mywork">My work</a>
+        <a href="#contact">Contact</a>
+    </div>
+</div>
