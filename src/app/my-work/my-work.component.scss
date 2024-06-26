@@ -49,15 +49,16 @@ section {
         justify-content: flex-end;
     }
 
-    img{
-        width:720px;
-        height:480px;
-        margin-left:20px;
-        &:hover{
-            width:740px;
+    img {
+        width: 720px;
+        height: 480px;
+        margin-left: 20px;
+
+        &:hover {
+            width: 740px;
             height: 500px;
-            margin-bottom:40px;
-            margin-left:0px;
+            margin-bottom: 40px;
+            margin-left: 0px;
         }
     }
 }
@@ -67,12 +68,14 @@ section {
     color: #5988FF;
     font-weight: 400;
     font-size: 45px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 .skill-enumeration {
     color: #5988FF;
     font-weight: 400;
     font-size: 23px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 .skill-description {
@@ -85,71 +88,149 @@ section {
     color: #5988FF;
     border: 2px solid #5988FF;
     border-radius: 10px;
-    width:137px;
-    height:65px;
-    padding:20px;
-    margin-top:20px;
-    display:flex;
+    width: 137px;
+    height: 65px;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color:white;
+    background-color: white;
     font-family: 'montserrat', sans-serif;
-    font-weight:400;
-    font-size:23px;
-    margin-bottom:20px;
+    font-weight: 400;
+    font-size: 23px;
+    margin-bottom: 20px;
 
     &:hover {
         cursor: pointer;
-        color:white;
+        color: white;
         border: 2px solid rgb(8, 73, 242);
         background-image: linear-gradient(to right, #83a6ff 0%, rgb(8, 73, 242) 100%);
-        width:143px;
-        height:77px; 
-        margin-bottom:15px;
-        border-color:white;
-        margin-top:18px;
+        width: 143px;
+        height: 77px;
+        margin-bottom: 15px;
+        border-color: white;
+        margin-top: 18px;
     }
 }
 
 .ellipse1 {
-    position:absolute;
+    position: absolute;
     width: 108.75px;
     height: 108.75px;
-    top:-50px;
-    left:500px;
+    top: -50px;
+    left: 500px;
 }
 
 .ellipse2 {
-    position:absolute;
+    position: absolute;
     width: 183px;
     height: 183px;
-    top:100px;
-    left:1000px;
+    top: 100px;
+    right: 700px;
 }
 
 .ellipse3 {
-    position:absolute;
+    position: absolute;
     width: 393.32px;
     height: 393.32px;
-    top:500px;
-    left:-200px;
-    z-index:-100;
+    top: 500px;
+    left: -200px;
+    z-index: -100;
 }
 
 .ellipse4 {
-    position:absolute;
+    position: absolute;
     width: 652.16px;
     height: 652.16px;
-    top:700px;
-    left:1100px;
-    z-index:-100;
+    top: 700px;
+    right: 30px;
+    z-index: -100;
 }
 
 .ellipse5 {
-    position:absolute;
+    position: absolute;
     width: 51px;
     height: 51px;
-    top:1200px;
-    left:100px;
-    z-index:-100;
+    top: 1200px;
+    left: 100px;
+    z-index: -100;
+}
+
+@media (max-width:1630px) {
+    .ellipse2 {
+        right: 500px;
+    }
+}
+
+@media (max-width:1430px) {
+    .ellipse2 {
+        right: 300px;
+    }
+}
+
+@media (max-width:1230px) {
+    .ellipse2 {
+        right: 100px;
+    }
+}
+
+@media (max-width:1050px) {
+    .ellipse2 {
+        top: 60px;
+    }
+
+    .single-project {
+        img {
+            width: 500px;
+            height: 333px;
+
+            &:hover {
+                width: 520px;
+                height: 353px;
+                margin-bottom: 40px;
+                margin-left: -0.5px;
+            }
+        }
+    }
+}
+
+@media (max-width:920px) {
+    .ellipse2 {
+        right: 20px;
+    }
+}
+
+@media (max-width:830px) {
+    .projects {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .single-project {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 150px;
+
+        div {
+            align-items: center;
+            gap: 20px;
+        }
+
+        img {
+            margin-top: 150px;
+            margin-bottom: 50px;
+
+            &:hover {
+                margin-bottom: 36px;
+            }
+        }
+    }
+
+    .git-button {
+        &:hover {
+            margin-bottom: 13px;
+            margin-top: 20px;
+        }
+    }
 }
