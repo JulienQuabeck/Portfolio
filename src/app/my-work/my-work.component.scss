@@ -10,6 +10,7 @@ section {
         color: #5988FF;
         font-weight: 400;
         font-size: 96px;
+        text-align: center;
     }
 
     div {
@@ -43,7 +44,7 @@ section {
     margin-bottom: 100px;
 
     div {
-        height: 100%;
+        // height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -119,7 +120,7 @@ section {
     width: 108.75px;
     height: 108.75px;
     top: -50px;
-    left: 500px;
+    left: 50px;
 }
 
 .ellipse2 {
@@ -229,8 +230,74 @@ section {
 
     .git-button {
         &:hover {
-            margin-bottom: 13px;
-            margin-top: 20px;
+            margin-bottom: 19px;
+            margin-top: 8px; //25px;
+        }
+    }
+
+    .ellipse2 {
+        display: none;
+    }
+}
+
+@media(min-width:831px) {
+    .single-project {
+
+        div {
+            height: 100%;
+        }
+    }
+}
+
+@media(max-width:690px) {
+    .ellipse1 {
+        z-index: -1;
+        top: 150px;
+        left: 300px;
+    }
+}
+
+@media(max-width:540px) {
+    .single-project {
+        img {
+            width: 400px;
+        }
+    }
+}
+
+@media(max-width:440px) {
+    section {
+        padding-left: 20px;
+        padding-right: 20px;
+        overflow:hidden;
+    }
+
+    .single-project {
+        img {
+            width: 350px;
+        }
+    }
+}
+
+@media(max-width:430px) {
+    .ellipse1 {
+        top: 250px;
+        left: 150px;
+    }
+}
+
+@media(max-width:390px) {
+    .single-project {
+        img {
+            width: 280px;
+        }
+    }
+}
+
+@media(max-width:345px) {
+    .single-project {
+        img {
+            width: 200px;
         }
     }
 }

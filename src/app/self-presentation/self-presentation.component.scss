@@ -4,6 +4,7 @@ section{
     align-items: top;
     padding-top:250px;
     margin-bottom:80px;
+    overflow-x:hidden;
 }
 
 .request{
@@ -21,7 +22,7 @@ section{
     font-family: 'montserrat', sans-serif;
     font-weight:400;
     font-size:23px;
-    width:50vw;
+    max-width:50vw;
 }
 
 .right-side-of-self-presentation{
