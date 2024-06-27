@@ -9,17 +9,19 @@
     </div>
 </section>
 
-<div class="burger-menu">
+<div class="burger-menu" [style.top]="burgerMenuClosed ? '10px' : '0px'">
     <img src="../../../assets/img/burger_menu.png" [style.display]="burgerMenuClosed ? 'block' : 'none'"
-        (click)="openBurgerMenu()">
-    <div [style.display]="burgerMenuClosed ? 'none' : 'flex'">
-        <div>
+     (click)="openBurgerMenu()">
+     <div [style.display]="burgerMenuClosed ? 'none' : 'flex'">   <!-- hier noch fehler  -->
+        <div class="close-burger-menu-button">
             <img src="../../../assets/img/burger_close.png" [style.display]="burgerMenuClosed ? 'none' : 'flex'"
                 (click)="openBurgerMenu()">
         </div>
-        <a href="#self-presentation">About me</a>
-        <a href="#skillset">Skill set</a>
-        <a href="#mywork">My work</a>
-        <a href="#contact">Contact</a>
+        <div class="burger-menu-links">
+            <a href="#self-presentation">About me</a>
+            <a href="#skillset">Skill set</a>
+            <a href="#mywork">My work</a>
+            <a href="#contact">Contact</a>
+        </div>
     </div>
 </div>

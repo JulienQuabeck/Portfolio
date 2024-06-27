@@ -14,10 +14,8 @@ export class HeaderComponent {
   openBurgerMenu(){
     if(this.burgerMenuClosed == true){
       this.burgerMenuClosed = false;
-      console.log(this.burgerMenuClosed);
     }else{
       this.burgerMenuClosed = true;
-      console.log(this.burgerMenuClosed);
     }
 
   }

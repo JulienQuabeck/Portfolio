@@ -85,12 +85,21 @@ section {
     font-size: 16px;
 }
 
+.button-container{
+    display:flex;
+    gap:20px;
+
+    a{
+        text-decoration: none;
+    }
+}
+
 .git-button {
     color: #5988FF;
     border: 2px solid #5988FF;
     border-radius: 10px;
     width: 137px;
-    height: 65px;
+    height: 40px;
     padding: 20px;
     margin-top: 20px;
     display: flex;
@@ -108,10 +117,10 @@ section {
         border: 2px solid rgb(8, 73, 242);
         background-image: linear-gradient(to right, #83a6ff 0%, rgb(8, 73, 242) 100%);
         width: 143px;
-        height: 77px;
+        height: 60px;
         margin-bottom: 15px;
         border-color: white;
-        margin-top: 18px;
+        margin-top: 5px;
     }
 }
 
@@ -128,7 +137,7 @@ section {
     width: 183px;
     height: 183px;
     top: 100px;
-    right: 700px;
+    right: 20%;
 }
 
 .ellipse3 {
@@ -261,7 +270,17 @@ section {
     .single-project {
         img {
             width: 400px;
+
+            &:hover{
+                width:420px;
+            }
         }
+    }
+}
+
+@media(max-width: 454px){
+    .ellipse1{
+        top:210px;
     }
 }
 
@@ -275,21 +294,31 @@ section {
     .single-project {
         img {
             width: 350px;
+
+            &:hover{
+                width:370px;
+            }
         }
     }
 }
 
 @media(max-width:430px) {
     .ellipse1 {
-        top: 250px;
-        left: 150px;
+        top: 290px;
+        left: 180px;
     }
 }
+
 
 @media(max-width:390px) {
     .single-project {
         img {
             width: 280px;
+
+            &:hover{
+                width: 300px;
+                margin-bottom: 37px;
+            }
         }
     }
 }

@@ -19,7 +19,10 @@
                 <div class="skill-title">{{project.title}}</div>
                 <div class="skill-enumeration">{{project.skills}}</div>
                 <div class="skill-description">{{project.desciption}}</div>
-                <button class="git-button">Github</button>
+                <aside class="button-container">
+                    <a class="git-button">Github</a>
+                    <a class="git-button" href="{{project.url}}" target="_blank">Live-Test</a>
+                </aside>
             </div>
         </div>
         }@else{
@@ -29,7 +32,10 @@
                 <div class="skill-title">{{project.title}}</div>
                 <div class="skill-enumeration">{{project.skills}}</div>
                 <div class="skill-description">{{project.desciption}}</div>
-                <button class="git-button">Github</button>
+                <aside class="button-container">
+                    <a class="git-button">Github</a>
+                    <a class="git-button" href="{{project.url}}" target="_blank">Live-Test</a>
+                </aside>
             </div>
         </div>
         }
