@@ -185,7 +185,7 @@ section {
     }
 }
 
-@media (max-width:1050px) {
+@media (max-width:1150px) {
     .ellipse2 {
         top: 60px;
     }
@@ -211,7 +211,7 @@ section {
     }
 }
 
-@media (max-width:830px) {
+@media (max-width:930px) {
     .projects {
         display: flex;
         flex-direction: column;
@@ -307,8 +307,15 @@ section {
         top: 290px;
         left: 180px;
     }
-}
 
+    .button-container{
+        flex-direction: column;
+    }
+
+    .single-project{
+        margin-bottom:250px;
+    }
+}
 
 @media(max-width:390px) {
     .single-project {

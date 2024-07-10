@@ -22,26 +22,70 @@
                 your projects with my work.</p>
             <p class="highlighted-text">Need a Frontend developer? <b>Contact me!</b></p>
         </div>
-        <div class="right-container">
-
-
-            <input id="name" type="text" placeholder="Your Name" class="input-hover" required>
-            <input id="mail" type="email" placeholder="Your email" class="input-hover" required>
-            <textarea id="message" placeholder="Your message" class="input-hover" required></textarea>
-            <div class="privacy-policy-container" (click)=checkCheckbox()>
-                <div class="checkbox-container">
-                    <input [(ngModel)]="checked" id="privacy-policy-checkbox" class="checkbox" type="checkbox">
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+            <div class="right-container">
+                <div class="form-container">
+                    <label [ngClass]="{'label-active': isFocused['name'] || contactData.name}">your name</label>
+                    <input #name='ngModel' id="name" [(ngModel)]="contactData.name" name="name" type="text"
+                        class="input-hover" required (focus)="onFocus('name')" (blur)="onBlur('name')">
+                    <div class="form-container-validation">
+                        @if(!name.valid && name.touched){
+                        <img src="./assets/img/bad.png">
+                        }@else if (name.valid) {
+                        <img src="./assets/img/good.png">
+                        }@else {}
+                    </div>
                 </div>
 
-                <div class="privacy-policy">
-                    I've read the <div>privacy policy</div> and agree to the processing of my
-                    data as outlined.
+                <div class="form-container">
+                    <label [ngClass]="{'label-active': isFocused['email'] || contactData.email}">your E-mail</label>
+                    <input #email='ngModel' id="mail" [(ngModel)]="contactData.email" name="mail" type="email"
+                        class="input-hover" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                        (focus)="onFocus('email')" (blur)="onBlur('email')">
+                    <div class="form-container-validation">
+                        @if(!email.valid && email.touched){
+                        <img src="./assets/img/bad.png">
+                        }@else if (email.valid) {
+                        <img src="./assets/img/good.png">
+                        }@else {}
+                    </div>
+                </div>
+                <div class="form-container">
+                    <label [ngClass]="{'label-active': isFocused['message'] || contactData.message}">your
+                        message</label>
+                    <textarea #message='ngModel' [(ngModel)]="contactData.message" id="message" name="message"
+                        class="input-hover" required (focus)="onFocus('message')" (blur)="onBlur('message')"></textarea>
+                    <div class="form-container-validation">
+                        @if(!message.valid && message.touched){
+                        <img src="./assets/img/bad.png">
+                        }@else if (message.valid) {
+                        <img src="./assets/img/good.png">
+                        }@else {}
+                    </div>
+                </div>
+                @if(!name.valid && name.touched && !name.disabled){
+                <span class="errorMessage">Please enter your name</span>
+                }@else if (!email.valid && email.touched && !email.disabled) {
+                <span class="errorMessage">Please enter you E-mail</span>
+                }@else if(!message.valid && message.touched && !message.disabled){
+                <span class="errorMessage">Please enter a message</span>
+                }@else if (name.touched && email.touched && message.touched && !checkbox.disabled){
+                <span class="errorMessage">Please accept the privacy policy.</span>
+                }
+                <div class="privacy-policy-container" (click)=checkCheckbox()>
+                    <div class="checkbox-container">
+                        <input #checkbox='ngModel' [(ngModel)]="checked" name="checkbox" id="privacy-policy-checkbox"
+                            class="checkbox" type="checkbox">
+                    </div>
+                    <div class="privacy-policy">
+                        I've read the <div>privacy policy</div> and agree to the processing of my
+                        data as outlined.
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button type="submit" value="submit" [ngClass]="{'allValid': name.valid && email.valid && message.valid}" class="say-hello-button">Say hello ;)</button>
                 </div>
             </div>
-            <div class="button-container">
-                <button class="say-hello-button" disabled>Say hello ;)</button>
-            </div>
-        </div>
-
+        </form>
     </div>
 </section>

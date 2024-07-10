@@ -72,24 +72,6 @@ section {
     color: #5988FF;
 }
 
-// .checkbox {
-//     margin: 0;
-//     margin-right: 10px;
-//     -ms-transform: scale(1.5);
-//     /* IE */
-//     -moz-transform: scale(1.5);
-//     /* FF */
-//     -webkit-transform: scale(1.5);
-//     /* Safari and Chrome */
-//     -o-transform: scale(1.5);
-//     /* Opera */
-//     transform: scale(1.5);
-
-//     &:hover {
-//         cursor: pointer;
-//     }
-// }
-
 .privacy-policy-container {
     display: flex;
     justify-content: flex-start;
@@ -144,61 +126,81 @@ section {
     margin-bottom: 80px;
     display: flex;
     justify-content: center;
+}
 
-    button {
-        // color: lightgray;
-        // font-family: 'Montserrat', sans-serif;
-        // font-weight: 400;
-        // font-size: 23px;
-        // width: 190px;
-        // height: 58px;
-        // padding: 15px 30px 15px 30px;
-        // gap: 10px;
-        // border-radius: 10px;
-        // border: 2px solid lightgray;
-        // background-color: white;
+.form-container {
+    position: relative;
+    margin-top: 5px;
 
-        color: #5988FF;
-        border: 2px solid #5988FF;
-        border-radius: 10px;
-        width: 200px;
-        height: 65px;
-        padding: 20px;
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: white;
-        font-family: 'montserrat', sans-serif;
-        font-weight: 400;
-        font-size: 23px;
-        margin-bottom: 20px;
-
-        &:hover {
-            cursor: pointer;
-            color: white;
-            border: 2px solid rgb(8, 73, 242);
-            background-image: linear-gradient(to right, #83a6ff 0%, rgb(8, 73, 242) 100%);
-            width: 220px;
-            height: 77px;
-            margin-bottom: 10px;
-            border-color: white;
-            margin-top: 18px;
-        }
+    label {
+        cursor: pointer;
+        position: absolute;
+        left: 20px;
+        top: 15px;
     }
 }
 
+.form-container-validation {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    width: 40px;
+}
+
+.label-active {
+    cursor: pointer;
+    position: absolute;
+    top: 32px;
+    left: 10px;
+    transform: translateY(-32px);
+    transition: all 0.3s ease;
+}
+
 .say-hello-button {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 23px;
-    width: 190px;
-    height: 58px;
-    padding: 15px 30px 15px 30px;
-    gap: 10px;
-    border-radius: 10px;
+    color: gray;
     border: 2px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 65px;
+    padding: 20px;
+    gap: 10px;
     background-color: white;
+    border-radius: 10px;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: 'montserrat', sans-serif;
+}
+
+.allValid {
+    // font-family: 'Montserrat', sans-serif;
+    // font-weight: 400;
+    // font-size: 23px;
+    // width: 190px;
+    // height: 58px;
+    // padding: 15px 30px 15px 30px;
+    // gap: 10px;
+    // border-radius: 10px;
+    // border: 2px solid gray;
+    // background-color: white;
+
+    color: #5988FF !important;
+    border: 2px solid #5988FF !important;
+    
+    &:hover {
+        cursor: pointer;
+        color: white !important;
+        border: 2px solid rgb(8, 73, 242);
+        background-image: linear-gradient(to right, #83a6ff 0%, rgb(8, 73, 242) 100%);
+        width: 220px;
+        height: 77px;
+        margin-bottom: 10px;
+        border-color: white;
+        margin-top: 18px;
+    }
 }
 
 .ellipse1 {
@@ -256,13 +258,24 @@ section {
     width: 100%;
 }
 
-.checkbox-container{
-    margin-left:10px;
-    width:50px;
+.checkbox-container {
+    margin-left: 10px;
+    width: 50px;
 
-    .checkbox{
-        width:50px !important;
+    .checkbox {
+        width: 50px !important;
+        box-shadow: unset !important;
     }
+}
+
+.errorMessage {
+    color: red;
+    font-weight: bold;
+    background-color: rgb(246, 175, 175);
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 3px;
+    margin-bottom: 5px;
 }
 
 @media(max-width:1100px) {
@@ -384,8 +397,8 @@ section {
     }
 }
 
-@media(max-width:450px){
-    .ellipse1{
-        left:60px;
+@media(max-width:450px) {
+    .ellipse1 {
+        left: 60px;
     }
 }
