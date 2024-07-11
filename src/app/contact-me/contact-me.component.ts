@@ -1,11 +1,11 @@
-import { NgClass } from '@angular/common';
+import { NgClass, NgStyle } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 @Component({
   selector: 'app-contact-me',
   standalone: true,
-  imports: [FormsModule, NgClass],
+  imports: [FormsModule, NgClass, NgStyle],
   templateUrl: './contact-me.component.html',
   styleUrl: './contact-me.component.scss'
 })
@@ -18,8 +18,10 @@ export class ContactMeComponent {
   checkCheckbox() {
     if (this.checked == false) {
       this.checked = true;
+      this.showPrivacyPolicyError = false;
     } else {
       this.checked = false;
+      this.showPrivacyPolicyError = true;
     }
   }
 
@@ -29,16 +31,14 @@ export class ContactMeComponent {
     message: "",
   }
 
-  nameValid = false;
-  emailValid = false;
-  messageValid = false;
   checkboxChecked = false;
-  isFocused: any = {'name': false, 'email': false, 'message': false};
+  showPrivacyPolicyError = false;
+  isFocused: any = { 'name': false, 'email': false, 'message': false };
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'http://julien-quabeck.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -49,7 +49,7 @@ export class ContactMeComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid && this.checked && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -58,21 +58,24 @@ export class ContactMeComponent {
           },
           error: (error) => {
             console.error(error);
+            //Button aktiv - was soll passieren, wenn die Mail nicht verschickt werden kann?!
+
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+    } else if (ngForm.submitted && ngForm.form.valid && this.checked && this.mailTest) {
       //hier alles weitere einfügen (falls gewünscht)
       ngForm.resetForm();
+    } else if (ngForm.submitted && ngForm.form.valid && !this.checked && this.mailTest) {
+      this.showPrivacyPolicyError = true;
     }
   }
 
-  onFocus(id:string) {
+  onFocus(id: string) {
     this.isFocused[id] = true;
   }
 
   onBlur(id: string) {
     this.isFocused[id] = false;
   }
-
 }

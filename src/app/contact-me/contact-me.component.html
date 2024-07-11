@@ -65,25 +65,32 @@
                 </div>
                 @if(!name.valid && name.touched && !name.disabled){
                 <span class="errorMessage">Please enter your name</span>
-                }@else if (!email.valid && email.touched && !email.disabled) {
-                <span class="errorMessage">Please enter you E-mail</span>
-                }@else if(!message.valid && message.touched && !message.disabled){
-                <span class="errorMessage">Please enter a message</span>
-                }@else if (name.touched && email.touched && message.touched && !checkbox.disabled){
-                <span class="errorMessage">Please accept the privacy policy.</span>
                 }
-                <div class="privacy-policy-container" (click)=checkCheckbox()>
+                @if (!email.valid && email.touched && !email.disabled) {
+                <span class="errorMessage">Please enter you E-mail</span>
+                }
+                @if(!message.valid && message.touched && !message.disabled){
+                <span class="errorMessage">Please enter a message</span>
+                }
+                <div class="privacy-policy-container">
                     <div class="checkbox-container">
                         <input #checkbox='ngModel' [(ngModel)]="checked" name="checkbox" id="privacy-policy-checkbox"
-                            class="checkbox" type="checkbox">
+                            class="checkbox" type="checkbox" (click)="checkCheckbox()">
                     </div>
                     <div class="privacy-policy">
                         I've read the <div>privacy policy</div> and agree to the processing of my
                         data as outlined.
                     </div>
                 </div>
+                <div class="error-message-container">
+                    @if(showPrivacyPolicyError && name.valid && email.valid && message.valid){
+                    <span class="errorMessage">Please accept the privacy policy.</span>
+                    }@else {}
+                </div>
                 <div class="button-container">
-                    <button type="submit" value="submit" [ngClass]="{'allValid': name.valid && email.valid && message.valid}" class="say-hello-button">Say hello ;)</button>
+                    <button type="submit" value="submit"
+                        [ngClass]="{'allValid': name.valid && email.valid && message.valid && this.checked}"
+                        class="say-hello-button">Say hello ;)</button>
                 </div>
             </div>
         </form>
