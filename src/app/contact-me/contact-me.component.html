@@ -95,4 +95,13 @@
             </div>
         </form>
     </div>
+    @if(mailSuccessfullySent){
+    <div class="sendMailsucceed" [ngClass]="{'sendMailsucceedShow':mailSuccessfullySent}">
+        <div>
+            <h1>E-mail sent successfully</h1>
+            Thank you for your E-Mail!<br />
+            I will reply as soon as possible!
+        </div>
+    </div>
+    }
 </section>

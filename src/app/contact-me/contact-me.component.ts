@@ -15,16 +15,6 @@ export class ContactMeComponent {
 
   checked = false;
 
-  checkCheckbox() {
-    if (this.checked == false) {
-      this.checked = true;
-      this.showPrivacyPolicyError = false;
-    } else {
-      this.checked = false;
-      this.showPrivacyPolicyError = true;
-    }
-  }
-
   contactData = {
     name: "",
     email: "",
@@ -34,8 +24,8 @@ export class ContactMeComponent {
   checkboxChecked = false;
   showPrivacyPolicyError = false;
   isFocused: any = { 'name': false, 'email': false, 'message': false };
-
   mailTest = false;
+  mailSuccessfullySent = false;
 
   post = {
     endPoint: 'http://julien-quabeck.de/sendMail.php',
@@ -47,6 +37,16 @@ export class ContactMeComponent {
       },
     },
   };
+
+  checkCheckbox() {
+    if (this.checked == false) {
+      this.checked = true;
+      this.showPrivacyPolicyError = false;
+    } else {
+      this.checked = false;
+      this.showPrivacyPolicyError = true;
+    }
+  }
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && this.checked && !this.mailTest) {
@@ -61,7 +61,7 @@ export class ContactMeComponent {
             //Button aktiv - was soll passieren, wenn die Mail nicht verschickt werden kann?!
 
           },
-          complete: () => console.info('send post complete'),
+          complete: () => this.mailSent(),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.checked && this.mailTest) {
       //hier alles weitere einfügen (falls gewünscht)
@@ -71,10 +71,28 @@ export class ContactMeComponent {
     }
   }
 
+  /**
+   * This function sets a variable from false to true for 5 seconds as soon as an E-mail was successfully sent
+   */
+  mailSent() {
+    this.mailSuccessfullySent = true;
+    setTimeout(() => {
+      this.mailSuccessfullySent = false;
+    }, 5000);
+  }
+
+  /**
+   * This function sets the var from false to true of the focused input-field
+   * @param id = string (id of focused i-field)
+   */
   onFocus(id: string) {
     this.isFocused[id] = true;
   }
 
+  /**
+   * This function sets the var from true to false of the focused input-field
+   * @param id = string (id of focused i-field)
+   */
   onBlur(id: string) {
     this.isFocused[id] = false;
   }
