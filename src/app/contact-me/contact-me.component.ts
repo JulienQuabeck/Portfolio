@@ -24,7 +24,7 @@ export class ContactMeComponent {
   checkboxChecked = false;
   showPrivacyPolicyError = false;
   isFocused: any = { 'name': false, 'email': false, 'message': false };
-  mailTest = false;
+  mailTest = true;
   mailSuccessfullySent = false;
 
   post = {
@@ -65,6 +65,7 @@ export class ContactMeComponent {
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.checked && this.mailTest) {
       //hier alles weitere einfügen (falls gewünscht)
+      this.mailSent();
       ngForm.resetForm();
     } else if (ngForm.submitted && ngForm.form.valid && !this.checked && this.mailTest) {
       this.showPrivacyPolicyError = true;

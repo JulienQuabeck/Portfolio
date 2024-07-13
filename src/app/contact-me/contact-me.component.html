@@ -25,7 +25,7 @@
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <div class="right-container">
                 <div class="form-container">
-                    <label [ngClass]="{'label-active': isFocused['name'] || contactData.name}">your name</label>
+                    <label [ngClass]="{'label-active': isFocused['name'] || contactData.name}" for="name">your name</label>
                     <input #name='ngModel' id="name" [(ngModel)]="contactData.name" name="name" type="text"
                         class="input-hover" required (focus)="onFocus('name')" (blur)="onBlur('name')">
                     <div class="form-container-validation">
@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="form-container">
-                    <label [ngClass]="{'label-active': isFocused['email'] || contactData.email}">your E-mail</label>
+                    <label [ngClass]="{'label-active': isFocused['email'] || contactData.email}" for="mail">your E-mail</label>
                     <input #email='ngModel' id="mail" [(ngModel)]="contactData.email" name="mail" type="email"
                         class="input-hover" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
                         (focus)="onFocus('email')" (blur)="onBlur('email')">
@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div class="form-container">
-                    <label [ngClass]="{'label-active': isFocused['message'] || contactData.message}">your
+                    <label [ngClass]="{'label-active': isFocused['message'] || contactData.message}" for="message">your
                         message</label>
                     <textarea #message='ngModel' [(ngModel)]="contactData.message" id="message" name="message"
                         class="input-hover" required (focus)="onFocus('message')" (blur)="onBlur('message')"></textarea>
@@ -95,7 +95,7 @@
             </div>
         </form>
     </div>
-    @if(mailSuccessfullySent){
+    <!-- @if(mailSuccessfullySent){ -->
     <div class="sendMailsucceed" [ngClass]="{'sendMailsucceedShow':mailSuccessfullySent}">
         <div>
             <h1>E-mail sent successfully</h1>
@@ -103,5 +103,5 @@
             I will reply as soon as possible!
         </div>
     </div>
-    }
+    <!-- } -->
 </section>
