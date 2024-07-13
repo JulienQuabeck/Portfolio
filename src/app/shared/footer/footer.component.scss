@@ -45,6 +45,11 @@ section {
     }
 }
 
+.logo{
+    margin-top:20px;
+    width:200px;
+}
+
 @media(max-width:520px){
     section{
         flex-direction: column;
