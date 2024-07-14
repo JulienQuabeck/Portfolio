@@ -38,6 +38,9 @@ export class ContactMeComponent {
     },
   };
 
+  /**
+   * This function checks, if the checkbox was checked or not
+   */
   checkCheckbox() {
     if (this.checked == false) {
       this.checked = true;
@@ -48,23 +51,24 @@ export class ContactMeComponent {
     }
   }
 
+  /**
+   * This function sends an e-mail to my e-mail adress
+   * @param ngForm 
+   */
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && this.checked && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            //hier alles weitere einfügen (falls gewünscht)
             ngForm.resetForm();
           },
           error: (error) => {
             console.error(error);
-            //Button aktiv - was soll passieren, wenn die Mail nicht verschickt werden kann?!
 
           },
           complete: () => this.mailSent(),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.checked && this.mailTest) {
-      //hier alles weitere einfügen (falls gewünscht)
       this.mailSent();
       ngForm.resetForm();
     } else if (ngForm.submitted && ngForm.form.valid && !this.checked && this.mailTest) {
