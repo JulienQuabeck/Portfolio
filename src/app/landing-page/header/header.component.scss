@@ -24,6 +24,8 @@ section {
         }
 
         li {
+            display:flex;
+            justify-content: center;
             font-family: 'Montserrat', sans-serif;
             font-size: 23px;
             font-weight: 400;
@@ -42,6 +44,11 @@ section {
             }
         }
     }
+}
+
+.language{
+    width:50px !important;
+    height:30px !important;
 }
 
 .burger-menu {

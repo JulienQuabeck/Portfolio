@@ -16,7 +16,7 @@ export class MyWorkComponent {
       skills: 'HTML | SCSS | Angular | TypeScript | Firebase',
       desciption: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
       git: 'https://github.com/JulienQuabeck/Join_Portfolio',
-      url: 'https://julien-quabeck.developerakademie.net/Join/html/index.html'
+      url: 'http://join.julien-quabeck.de/html/index.html'
     },
     {
       title: 'El Pollo Loco',
@@ -32,7 +32,7 @@ export class MyWorkComponent {
       skills: 'HTML | SCSS | Angular | TypeScript | API',
       desciption: 'A self created Pokedex like in the famous TV-Show Pokemon',
       git: 'https://github.com/JulienQuabeck/newPokemonAPI',
-      url: 'https://julien-quabeck.developerakademie.net/angular-projects/Pokemon/'
+      url: 'http://pokedex.julien-quabeck.de/index.html'
     }
   ];
 }

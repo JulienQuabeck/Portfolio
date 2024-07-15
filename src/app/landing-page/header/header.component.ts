@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 
   burgerMenuClosed = true;
+  language='english';
 
   openBurgerMenu(){
     if(this.burgerMenuClosed == true){
@@ -20,5 +21,12 @@ export class HeaderComponent {
 
   }
 
+  switchLanguage(){
+    if(this.language == 'english'){
+      this.language = 'german';
+    }else{
+      this.language = 'english';
+    }
+  }
 
 }

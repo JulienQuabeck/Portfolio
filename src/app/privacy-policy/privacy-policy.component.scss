@@ -1,9 +1,9 @@
 section {
     position: relative;
     margin: 20px;
+    margin-top:150px;
 
     div {
-        position: absolute;
         z-index: 999;
         max-width: 1920px;
 
@@ -71,6 +71,17 @@ section {
     height: 500px;
     top: 2050px;
     left: 40%;
+}
+
+app-footer{
+    position: absolute;
+    width:100%;
+}
+
+app-header{
+    position:absolute;
+    top:0;
+    width:100%;
 }
 
 @media(max-width:1010px) {

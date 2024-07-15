@@ -1,5 +1,5 @@
 section {
-    height: 100vh;
+    // height: 100vh;
     width:100%;
     background-color: whitesmoke;
     display:flex;
@@ -53,6 +53,18 @@ section {
     position:absolute;
     top:30%;
     right:20%;
+}
+
+app-header{
+    position:absolute;
+    top:0;
+    width:100%;
+}
+
+app-footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
 }
 
 @media(max-width:500px){
