@@ -1,13 +1,22 @@
 <section id="mywork">
     <div class="title-and-description">
-        <h1>My work</h1>
+        @if(language == 'english'){
+            <h1>My work</h1>
+        }@else {
+            <h1>Meine Projekte</h1>
+        }
+
         <img src="./assets/img/Ellipse 9.png" class="ellipse1">
         <img src="./assets/img/Ellipse 9.png" class="ellipse2">
         <img src="./assets/img/Ellipse 9.png" class="ellipse3">
         <img src="./assets/img/Ellipse 9.png" class="ellipse4">
         <img src="./assets/img/Ellipse 9.png" class="ellipse5">
-        <div>
-            Explore a selection of my work here - Interact with <br> projects to see my skills in action.
+        <div class="introduction">
+            @if(language == 'english'){
+                Explore a selection of my work here - Interact with <br> projects to see my skills in action
+            }@else {
+                Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit <br> Projekten, um meine Fähigkeiten in Aktion zu sehen.
+            }
         </div>
     </div>
     <div class="projects">
@@ -18,7 +27,11 @@
             <div class="align-flex-end">
                 <div class="skill-title">{{project.title}}</div>
                 <div class="skill-enumeration">{{project.skills}}</div>
-                <div class="skill-description">{{project.desciption}}</div>
+                @if(language == 'english'){
+                    <div class="skill-description">{{project.description}}</div>
+                }@else {
+                    <div class="skill-description">{{project.descriptionGer}}</div>
+                }
                 <aside class="button-container">
                     <a class="git-button" href="{{project.git}}" target="_blank">Github</a>
                     <a class="git-button" href="{{project.url}}" target="_blank">Live-Test</a>
@@ -31,7 +44,11 @@
             <div>
                 <div class="skill-title">{{project.title}}</div>
                 <div class="skill-enumeration">{{project.skills}}</div>
-                <div class="skill-description">{{project.desciption}}</div>
+                @if(language == 'english'){
+                    <div class="skill-description">{{project.description}}</div>
+                }@else {
+                    <div class="skill-description">{{project.descriptionGer}}</div>
+                }
                 <aside class="button-container">
                     <a a class="git-button" href="{{project.git}}" target="_blank">Github</a>
                     <a class="git-button" href="{{project.url}}" target="_blank">Live-Test</a>

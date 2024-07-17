@@ -1,6 +1,6 @@
 import { NgClass, NgStyle } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 @Component({
   selector: 'app-contact-me',
@@ -10,6 +10,8 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contact-me.component.scss'
 })
 export class ContactMeComponent {
+
+  @Input () language = '';
 
   http = inject(HttpClient)
 

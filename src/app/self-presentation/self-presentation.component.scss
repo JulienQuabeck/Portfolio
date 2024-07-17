@@ -1,124 +1,126 @@
-section{
-    position:relative;
-    display:flex;
+section {
+    position: relative;
+    display: flex;
     align-items: top;
-    padding-top:250px;
-    margin-bottom:80px;
-    overflow-x:hidden;
+    padding-top: 250px;
+    margin-bottom: 80px;
+    overflow-x: hidden;
 }
 
-.request{
+.request {
     font-size: 121px;
-    font-weight:400;
-    width:50vw;
-    display:flex;
+    font-weight: 400;
+    width: 50vw;
+    display: flex;
     justify-content: center;
-    padding-left:5vw;
-    margin-right:1vw;
-    min-width:500px;
+    padding-left: 5vw;
+    margin-right: 1vw;
+    min-width: 500px;
 }
 
-.self-presentation{
+.self-presentation {
     font-family: 'montserrat', sans-serif;
-    font-weight:400;
-    font-size:23px;
-    max-width:50vw;
+    font-weight: 400;
+    font-size: 23px;
+    max-width: 50vw;
 }
 
-.right-side-of-self-presentation{
-    display:flex;
+.right-side-of-self-presentation {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    padding-right:5vw;
-    margin-left:1vw;
-    min-width:300px;
-    .button-container{
-        margin-top:50px;
-        a{
-            margin-top:40px;
-            background-color:white;
-            border:2px solid #5988FF;
-            border-radius:10px;
+    padding-right: 5vw;
+    margin-left: 1vw;
+    min-width: 300px;
+
+    .button-container {
+        margin-top: 50px;
+
+        a {
+            margin-top: 40px;
+            background-color: white;
+            border: 2px solid #5988FF;
+            border-radius: 10px;
             padding: 15px 30px 15px 30px;
-            color:#5988FF;
-            font-size:23px;
-            font-weight:400;
-            width:273px;
-            height:67px;
-            margin-bottom:20px;
+            color: #5988FF;
+            font-size: 23px;
+            font-weight: 400;
+            width: 273px;
+            height: 67px;
+            margin-bottom: 20px;
             background-image: linear-gradient(to right, #ffffff 0%, rgb(255, 255, 255) 100%);
-            transition:color 0.5s ease, background-image 0.5s ease;
+            transition: color 0.5s ease, background-image 0.5s ease;
             text-decoration: none;
 
-            &:hover{
-                cursor:pointer;
-                color:white;
+            &:hover {
+                cursor: pointer;
+                color: white;
                 border: 2px solid rgb(8, 73, 242);
                 background-image: linear-gradient(to right, #83a6ff 0%, rgb(8, 73, 242) 100%);
-                width:283px;
-                height:77px;
-                margin-bottom:10px;
-                border-color:white;
+                width: 283px;
+                height: 77px;
+                margin-bottom: 10px;
+                border-color: white;
             }
         }
     }
 }
 
-.ellipse{
-    width:82px;
-    height:82px;
-    position:absolute;
-    left:75%;
-    top:15%;
+.ellipse {
+    width: 82px;
+    height: 82px;
+    position: absolute;
+    left: 75%;
+    top: 15%;
 }
 
-@media(max-width:1041px){
+@media(max-width:1041px) {
 
-    .request{
-        padding-left:1vw;
-        min-width:0;
+    .request {
+        padding-left: 1vw;
+        min-width: 0;
     }
 
-    .right-side-of-self-presentation{
-        padding-right:1vw;
+    .right-side-of-self-presentation {
+        padding-right: 1vw;
 
     }
 
-    .self-presentation{
-        margin-right:5px;
-    }
-}
-
-@media(max-width:900px){
-    .request{
-        font-size:80px;
+    .self-presentation {
+        margin-right: 5px;
     }
 }
 
-@media (max-width:840px){
-    section{
-        padding-top:150px;
-    }
-
-    .ellipse{
-        top:10%;
+@media(max-width:900px) {
+    .request {
+        font-size: 80px;
     }
 }
 
-@media(max-width:650px){
-    #self-presentation{
+@media (max-width:840px) {
+    section {
+        padding-top: 150px;
+    }
+
+    .ellipse {
+        top: 10%;
+    }
+}
+
+@media(max-width:650px) {
+    #self-presentation {
         flex-direction: column;
         align-items: center;
     }
 
-    .request{
-        margin-bottom:50px;
+    .request {
+        margin-bottom: 50px;
     }
 }
 
-@media(max-width:370px){
-    .ellipse{
-        left:70%;
-        top:10%;
+@media(max-width:370px) {
+    .ellipse {
+        left: 70%;
+        top: 10%;
     }
 }

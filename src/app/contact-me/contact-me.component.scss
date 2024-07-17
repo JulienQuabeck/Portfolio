@@ -15,17 +15,14 @@ section {
         resize: none;
         border: 1px solid #5988FF;
         border-radius: 10px;
-        padding: 15px, 25px, 15px, 25px;
         height: 182px;
-        width: 617px;
+        width:100%;
         margin-bottom: 20px;
         padding: 10px 20px;
 
         &:hover {
             &:hover {
                 border: 2px solid #5988FF;
-                height: 180px;
-                width: 615px;
             }
         }
     }
@@ -54,22 +51,23 @@ section {
 .input-hover {
     border: 1px solid #5988FF;
     border-radius: 10px;
-    padding: 15px 25px 15px 25px;
-    height: 30px;
-    width: 617px;
-    margin-bottom: 20px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 22px;
     padding: 10px 20px;
+
 
     &:hover {
         cursor: pointer;
         border: 2px solid #5988FF;
-        height: 28px;
-        width: 615px;
+        margin-bottom: 20px;
     }
 }
 
 .highlighted-text {
     color: #5988FF;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 .privacy-policy-container {
@@ -97,6 +95,7 @@ section {
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
         font-size: 14px;
+        width:auto;
 
         div {
             padding: 0px 4px;
@@ -116,7 +115,6 @@ section {
         div {
             div {
                 text-decoration: underline;
-                font-weight: bolder;
             }
         }
     }
@@ -143,7 +141,7 @@ section {
 
 .form-container-validation {
     position: absolute;
-    top: 13px;
+    top: 5px;
     right: 15px;
     width: 40px;
 }
@@ -211,6 +209,7 @@ section {
     position: absolute;
     top: 400px;
     left: 242px;
+    opacity: 0.8;
 }
 
 .ellipse2 {
@@ -220,6 +219,7 @@ section {
     position: absolute;
     top: 700px;
     right: 150px;
+    opacity: 0.8;
 }
 
 .ellipse3 {
@@ -269,8 +269,8 @@ section {
     }
 }
 
-.error-message-container{
-    margin-top:10px;
+.error-message-container {
+    margin-top: 10px;
 }
 
 .errorMessage {
@@ -282,35 +282,36 @@ section {
     padding: 3px;
 }
 
-.sendMailsucceed{
-    z-index:-999;
-    position:fixed;
-    bottom:45%;
-    width:100%;
-    display:flex;
+.sendMailsucceed {
+    z-index: -999;
+    position: fixed;
+    bottom: 45%;
+    width: 100%;
+    display: flex;
     justify-content: center;
     opacity: 0;
     transition: opacity 1s ease-in-out;
 
-    h1{
+    h1 {
         letter-spacing: 10px;
-        font-size:40px;
+        font-size: 40px;
     }
-    div{
-        background-color:rgba(222, 235, 238, 0.95);
-        padding:5px;
-        width:90%;
-        border:2px solid rgba(103, 146, 255);
-        border-radius:10px;
-        z-index:999;
-        font-size:20px;
+
+    div {
+        background-color: rgba(222, 235, 238, 0.95);
+        padding: 5px;
+        width: 90%;
+        border: 2px solid rgba(103, 146, 255);
+        border-radius: 10px;
+        z-index: 999;
+        font-size: 20px;
         hyphens: auto;
     }
 }
 
-.sendMailsucceedShow{
+.sendMailsucceedShow {
     opacity: 1 !important;
-    z-index:999;
+    z-index: 999;
 }
 
 @media(max-width:1100px) {
@@ -331,7 +332,7 @@ section {
     }
 
     .arrow {
-        top: 920px;
+        top: 1000px;
     }
 
     .left-container {
@@ -393,8 +394,15 @@ section {
         input,
         textarea {
             width: 200px;
-            &:hover{
-                width:200px !important;
+
+            &:hover {
+                // width:200px !important;
+            }
+        }
+
+        .input-hover {
+            &:hover {
+                width: 200px !important;
             }
         }
     }
@@ -402,6 +410,10 @@ section {
     .ellipse1 {
         top: 550px;
         left: 100px;
+    }
+
+    .arrow {
+        top: 1100px;
     }
 }
 

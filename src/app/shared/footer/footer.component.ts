@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SocialMediaComponent } from '../social-media/social-media.component';
 
 @Component({
@@ -9,5 +9,7 @@ import { SocialMediaComponent } from '../social-media/social-media.component';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
+
+  @Input () language  = '';
 
 }

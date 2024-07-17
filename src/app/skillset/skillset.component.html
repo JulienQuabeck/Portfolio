@@ -1,5 +1,9 @@
 <section id="skillset">
-    <div class="skillset-headline">skill set</div>
+    @if(language == 'english'){
+        <div class="skillset-headline">skill set</div>   
+    }@else {
+        <div class="skillset-headline">Meine Skills</div>
+    }
     <div class="skills-container">
         @for(skill of skills; track skills; let index = $index){
             <div class="single-skill-container">

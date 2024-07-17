@@ -5,6 +5,10 @@ section {
     position: relative;
 }
 
+.introduction{
+    margin-bottom:60px;
+}
+
 .title-and-description {
     h1 {
         color: #5988FF;
@@ -56,9 +60,9 @@ section {
         margin-left: 20px;
 
         &:hover {
-            width: 740px;
+            width: 739.2px;
             height: 500px;
-            margin-bottom: 40px;
+            margin-bottom: 36px;
             margin-left: 0px;
         }
     }
@@ -240,7 +244,8 @@ section {
     .git-button {
         &:hover {
             margin-bottom: 19px;
-            margin-top: 8px; //25px;
+            margin-top: 2px;
+            margin-left:-6px;
         }
     }
 
@@ -274,6 +279,12 @@ section {
             &:hover{
                 width:420px;
             }
+        }
+    }
+
+    .git-button{
+        &:hover{
+            margin-top:0;
         }
     }
 }
@@ -315,6 +326,12 @@ section {
     .single-project{
         margin-bottom:250px;
     }
+
+    .git-button{
+        &:hover{
+            margin-top:2px;
+        }
+    }
 }
 
 @media(max-width:390px) {
@@ -334,6 +351,9 @@ section {
     .single-project {
         img {
             width: 200px;
+            &:hover{
+                margin-bottom: 0px;
+            }
         }
     }
 }

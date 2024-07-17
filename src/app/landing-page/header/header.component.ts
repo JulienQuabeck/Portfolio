@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,24 +9,33 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  burgerMenuClosed = true;
-  language='english';
+  @Output() sentlanguage = new EventEmitter;
 
-  openBurgerMenu(){
-    if(this.burgerMenuClosed == true){
+  burgerMenuClosed = true;
+  language = 'english';
+
+
+
+  openBurgerMenu() {
+    if (this.burgerMenuClosed == true) {
       this.burgerMenuClosed = false;
-    }else{
+    } else {
       this.burgerMenuClosed = true;
     }
 
   }
 
-  switchLanguage(){
-    if(this.language == 'english'){
+  switchLanguage() {
+    if (this.language == 'english') {
       this.language = 'german';
-    }else{
+    } else {
       this.language = 'english';
     }
+    this.sendLanguageToParent();
+  }
+
+  sendLanguageToParent() {
+    this.sentlanguage.emit();
   }
 
 }

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-skillset',
@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
   styleUrl: './skillset.component.scss'
 })
 export class SkillsetComponent {
+
+  @Input() language = '';
 
   skills = [
     {
