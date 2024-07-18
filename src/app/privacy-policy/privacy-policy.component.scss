@@ -29,6 +29,7 @@ section {
     position: absolute;
     opacity: 0.5;
     z-index: 100;
+    opacity: 0.4;
 }
 
 .ellipse1 {
@@ -36,6 +37,7 @@ section {
     height: 400px;
     top: 5%;
     left: 10%;
+    opacity: 0.4;
 }
 
 .ellipse2 {
@@ -43,6 +45,7 @@ section {
     height: 200px;
     top: 750px;
     left: 80%;
+    opacity: 0.4;
 }
 
 .ellipse3 {
@@ -50,6 +53,7 @@ section {
     height: 70px;
     top: 1150px;
     left: 30%;
+    opacity: 0.4;
 }
 
 .ellipse4 {
@@ -57,6 +61,7 @@ section {
     height: 400px;
     top: 1300px;
     left: 60%;
+    opacity: 0.4;
 }
 
 .ellipse5 {
@@ -64,6 +69,7 @@ section {
     height: 170px;
     top: 1700px;
     left: 10%;
+    opacity: 0.4;
 }
 
 .ellipse6 {
@@ -71,10 +77,11 @@ section {
     height: 500px;
     top: 2050px;
     left: 40%;
+    opacity: 0.4;
 }
 
 app-footer{
-    position: absolute;
+    position: sticky;
     width:100%;
 }
 

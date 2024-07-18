@@ -1,6 +1,30 @@
-<app-landing-page (sentlanguage)="switchLanguage()"></app-landing-page>
-<app-self-presentation [language]="this.language"></app-self-presentation>
-<!--<app-skillset [language]="this.language"></app-skillset>
-<app-my-work [language]="this.language"></app-my-work> 
- <app-contact-me [language]="this.language"></app-contact-me>
-<app-footer [language]="this.language"></app-footer>-->
+@if(!landscapeMode){
+<section>
+    <app-landing-page (sentlanguage)="switchLanguage()"></app-landing-page>
+    <app-self-presentation [language]="this.language"></app-self-presentation>
+    <app-skillset [language]="this.language"></app-skillset>
+    <app-my-work [language]="this.language"></app-my-work>
+    <app-contact-me [language]="this.language"></app-contact-me>
+    <app-footer [language]="this.language"></app-footer>
+</section>
+}@else{
+<section class="landscape-warning main-font-color">
+    @if(language == 'english'){
+    <div>
+        please turn your device!
+    </div>
+    }@else {
+    <div>
+        Bitte drehen Sie das Smartphone!
+    </div>}
+    <div>
+        <img src="./assets/img/Ellipse 9.png" class="ellipse1">
+    </div>
+    <div>
+        <img src="./assets/img/Ellipse 9.png" class="ellipse2">
+    </div>
+    <div>
+        <img src="./assets/img/Ellipse 9.png" class="ellipse3">
+    </div>
+</section>
+}

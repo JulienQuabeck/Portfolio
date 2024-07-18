@@ -18,11 +18,11 @@
 </section>
 
 <div class="burger-menu" [style.top]="burgerMenuClosed ? '10px' : '0px'">
-    <img src="../../../assets/img/burger_menu.png" [style.display]="burgerMenuClosed ? 'block' : 'none'"
+    <img src="./assets/img/burger_menu.png" [style.display]="burgerMenuClosed ? 'block' : 'none'"
         (click)="openBurgerMenu()">
     <div [style.display]="burgerMenuClosed ? 'none' : 'flex'">
         <div class="close-burger-menu-button">
-            <img src="../../../assets/img/burger_close.png" [style.display]="burgerMenuClosed ? 'none' : 'flex'"
+            <img src="./assets/img/burger_close.png" [style.display]="burgerMenuClosed ? 'none' : 'flex'"
                 (click)="openBurgerMenu()">
         </div>
         <div class="burger-menu-links">

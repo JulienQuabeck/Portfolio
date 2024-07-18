@@ -1,18 +1,20 @@
 section {
-    // height: 100vh;
+    height: 100vh;
     width:100%;
     background-color: whitesmoke;
     display:flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: space-between;
     aside {
         font-family:'Montserrat', sans-serif;
-        height:100vh;
         max-width: 1920px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding:0 20px;
+        margin-top:100px;
     }
 
     a{
@@ -37,6 +39,7 @@ section {
     position:absolute;
     top:10%;
     left:10%;
+    opacity: 0.4;
 }
 
 .ellipse2{
@@ -45,6 +48,7 @@ section {
     position:absolute;
     bottom:10%;
     right:30%;
+    opacity: 0.4;
 }
 
 .ellipse3{
@@ -53,6 +57,7 @@ section {
     position:absolute;
     top:30%;
     right:20%;
+    opacity: 0.4;
 }
 
 app-header{
@@ -62,7 +67,6 @@ app-header{
 }
 
 app-footer{
-    position:absolute;
     bottom:0;
     width:100%;
 }

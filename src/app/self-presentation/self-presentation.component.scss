@@ -4,7 +4,7 @@ section {
     align-items: top;
     padding-top: 250px;
     margin-bottom: 80px;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 
 .request {
@@ -23,6 +23,65 @@ section {
     font-weight: 400;
     font-size: 23px;
     max-width: 50vw;
+    display:flex;
+}
+
+#self-presentation-german {
+    flex-direction: column !important;
+    align-items: center;
+    gap:20px;
+    display:flex;
+}
+
+.request-german {
+    font-size: 121px;
+    font-weight: 400;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    margin-right: 1vw;
+    min-width: 500px;
+}
+
+.right-side-of-self-presentation-german{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom:20px;
+    min-width: 300px;
+
+    .button-container {
+        margin-top: 50px;
+
+        a {
+            margin-top: 40px;
+            background-color: white;
+            border: 2px solid #5988FF;
+            border-radius: 10px;
+            padding: 15px 30px 15px 30px;
+            color: #5988FF;
+            font-size: 23px;
+            font-weight: 400;
+            width: 273px;
+            height: 67px;
+            margin-bottom: 20px;
+            background-image: linear-gradient(to right, #ffffff 0%, rgb(255, 255, 255) 100%);
+            transition: color 0.5s ease, background-image 0.5s ease;
+            text-decoration: none;
+
+            &:hover {
+                cursor: pointer;
+                color: white;
+                border: 2px solid rgb(8, 73, 242);
+                background-image: linear-gradient(to right, #83a6ff 0%, rgb(8, 73, 242) 100%);
+                width: 283px;
+                height: 77px;
+                margin-bottom: 10px;
+                border-color: white;
+            }
+        }
+    }
 }
 
 .right-side-of-self-presentation {
@@ -91,6 +150,30 @@ section {
     }
 }
 
+@media(max-width:975px){
+    .request-german{
+        font-size:5em;
+    }
+}
+
+@media(max-width:650px){
+    .request-german{
+        font-size:3em;
+    }
+}
+
+@media(max-width:515px){
+    .request-german{
+        min-width:auto;
+    }
+}
+
+@media(max-width:460px){
+    .request-german{
+        font-size:2em;
+    }
+}
+
 @media(max-width:900px) {
     .request {
         font-size: 80px;
@@ -121,6 +204,10 @@ section {
 @media(max-width:370px) {
     .ellipse {
         left: 70%;
-        top: 10%;
+        top: 9%;
+    }
+
+    .right-side-of-self-presentation{
+        padding-right:0;
     }
 }

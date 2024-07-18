@@ -11,4 +11,23 @@ import { FooterComponent } from '../shared/footer/footer.component';
 })
 export class ImprintComponent {
 
+  landscapeMode: boolean = false;
+
+  constructor() {
+    this.checkLandscapeMode();
+
+
+    window.addEventListener('resize', () => this.checkLandscapeMode());
+    window.addEventListener('orientationchange', () => this.checkLandscapeMode());
+    document.addEventListener('DOMContentLoaded', () => this.checkLandscapeMode());
+}
+
+  checkLandscapeMode(){
+    if(window.innerHeight < window.innerWidth && window.innerWidth < 768){
+      this.landscapeMode = true;
+      debugger
+    }else{
+      this.landscapeMode = false;
+    }
+  }
 }

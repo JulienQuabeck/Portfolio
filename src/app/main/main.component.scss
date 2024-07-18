@@ -1,0 +1,46 @@
+section{
+    // max-width:1920px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.landscape-warning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: whitesmoke;
+    font-size: 30px;
+}
+
+.ellipse1 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 20px;
+    left: 20px;
+    opacity: 0.4;
+}
+
+.ellipse2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    bottom: 60px;
+    right: 40px;
+    opacity: 0.4;
+}
+
+.ellipse3 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 60px;
+    right: 200px;
+    opacity: 0.4;
+}

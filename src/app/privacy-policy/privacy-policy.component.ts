@@ -11,4 +11,22 @@ import { HeaderComponent } from '../landing-page/header/header.component';
 })
 export class PrivacyPolicyComponent {
 
+  landscapeMode: boolean = false;
+
+  constructor() {
+    this.checkLandscapeMode();
+
+    window.addEventListener('resize', () => this.checkLandscapeMode());
+    window.addEventListener('orientationchange', () => this.checkLandscapeMode());
+    document.addEventListener('DOMContentLoaded', () => this.checkLandscapeMode());
+}
+
+  checkLandscapeMode(){
+    if(window.innerHeight < window.innerWidth && window.innerWidth < 768){
+      this.landscapeMode = true;
+    }else{
+      this.landscapeMode = false;
+    }
+  }
+
 }

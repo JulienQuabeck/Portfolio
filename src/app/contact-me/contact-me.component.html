@@ -37,7 +37,7 @@
                     }@else {
                         <label [ngClass]="{'label-active': isFocused['name'] || contactData.name}" for="name">Name</label>
                     }
-                    <input #name='ngModel' id="name" [(ngModel)]="contactData.name" name="name" type="text"
+                    <input #name='ngModel' id="name" autocomplete="off" [(ngModel)]="contactData.name" name="name" type="text"
                         class="input-hover" required (focus)="onFocus('name')" (blur)="onBlur('name')">
                     <div class="form-container-validation">
                         @if(!name.valid && name.touched){
