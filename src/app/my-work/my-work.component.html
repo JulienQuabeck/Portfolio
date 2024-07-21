@@ -28,9 +28,9 @@
                 <div class="skill-title">{{project.title}}</div>
                 <div class="skill-enumeration">{{project.skills}}</div>
                 @if(language == 'english'){
-                    <div class="skill-description">{{project.description}}</div>
+                    <div class="skill-description-reverse">{{project.description}}</div>
                 }@else {
-                    <div class="skill-description">{{project.descriptionGer}}</div>
+                    <div class="skill-description-reverse">{{project.descriptionGer}}</div>
                 }
                 <aside class="button-container">
                     <a class="git-button" href="{{project.git}}" target="_blank">Github</a>
@@ -43,11 +43,11 @@
             <img src={{project.img}}>
             <div>
                 <div class="skill-title">{{project.title}}</div>
-                <div class="skill-enumeration">{{project.skills}}</div>
+                <div class="skill-enumeration skill-enumeration-padding">{{project.skills}}</div>
                 @if(language == 'english'){
-                    <div class="skill-description">{{project.description}}</div>
+                    <div class="skill-description skill-description-normal">{{project.description}}</div>
                 }@else {
-                    <div class="skill-description">{{project.descriptionGer}}</div>
+                    <div class="skill-description skill-description-normal">{{project.descriptionGer}}</div>
                 }
                 <aside class="button-container">
                     <a a class="git-button" href="{{project.git}}" target="_blank">Github</a>

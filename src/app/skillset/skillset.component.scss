@@ -6,11 +6,11 @@ section{
     background-image: linear-gradient(135deg, #a0bbff 0%, #5988FF 10%);
     margin-top:40px;
     padding-bottom:40px;
-    width: 100%;
+    width:100vw;
 }
 
 .content{
-    width:90%;
+    width:100vw;
     max-width:1920px;
     display: flex;
     flex-direction: column;
@@ -24,6 +24,7 @@ section{
     font-weight:400;
     font-size:96px;
     text-align:center;
+    margin-top:10px;
 }
 
 .skills-container{
@@ -57,6 +58,12 @@ section{
     }
 }
 
+@media(max-width:500px){
+    .skillset-headline{
+        font-size:80px;
+    }
+}
+
 @media(max-width:450px){
     .skills-container{
         width:90%;
@@ -69,9 +76,27 @@ section{
     }
 }
 
+@media(max-width:420px){
+    .skillset-headline{
+        font-size:70px;
+    }
+}
+
 @media (max-width:400px){
     .skillset-headline{
         margin-bottom:20px;
         line-height:80px;
     }
 }
+
+@media (max-width:370px){
+    .skillset-headline{
+        font-size:60px;
+    }
+}
+
+ @media (max-width:350px){
+    .skillset-headline{
+        font-size:80px;
+    }
+ }

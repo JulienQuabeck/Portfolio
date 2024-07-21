@@ -1,5 +1,6 @@
 section {
-    width: 100%;
+    max-width: 1920px;
+    width: 100vw;
     height: 117px;
     display: flex;
     justify-content: space-between;
@@ -52,6 +53,8 @@ section {
 }
 
 .burger-menu {
+    width: 100vw;
+    max-width: 1920px;
     display: none;
 
     img {
@@ -81,12 +84,14 @@ section {
 
     .burger-menu {
         display: flex;
+        justify-content: flex-end;
+        align-items: center;
         position: absolute;
         padding-right: 20px;
         padding-top: 10px;
         right: 0;
         z-index: 999;
-        background-color: rgba(255, 255, 255, 0.8);
+        // background-color: rgba(255, 255, 255, 0.8);
 
         &:hover {
             cursor: pointer;
@@ -95,6 +100,8 @@ section {
         img {
             display: flex;
             z-index: 999;
+            width:40px;
+            height:30px;
         }
 
         div {
@@ -106,14 +113,6 @@ section {
             font-family: 'Montserrat', sans-serif;
             z-index: 998;
             width: 100vw;
-            // right: 0;
-            // padding-right: 20px;
-
-            div {
-                // display:flex;
-                // align-items: center;
-                // width:100%;
-            }
 
             img {
                 width: 32px;
@@ -136,10 +135,16 @@ section {
     }
 
     .burger-menu-links {
+        background-color: rgba(255, 255, 255, 0.8);
         display: flex;
         justify-content: center;
         align-items: center;
         margin-bottom: 20px;
+        a{
+            img{
+                margin-bottom:20px;
+            }
+        }
     }
 }
 

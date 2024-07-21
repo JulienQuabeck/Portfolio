@@ -1,30 +1,32 @@
 <section id="landing-page" class="main">
-    <img src="./assets/img/Ellipse 9.png" class="ellipseBehindPicture">
-    <app-header (sentlanguage)="switchLanguage()"></app-header>
-    <div class="name">
-        @if(language == 'english'){
-        Hello! I am Julien <br>
-        <div class="title">
-            FRONTEND<br>
-            DEVELOPER
+    <div class="content">
+        <img src="./assets/img/Ellipse 9.png" class="ellipseBehindPicture">
+        <app-header (sentlanguage)="switchLanguage()"></app-header>
+        <div class="name">
+            @if(language == 'english'){
+            Hello! I am Julien <br>
+            <div class="title">
+                FRONTEND<br>
+                DEVELOPER
+            </div>
+            }@else {
+            Hallo! Ich heiße Julien <br>
+            <div class="title">
+                FRONTEND<br>
+                DEVELOPER
+            </div>
+            }
         </div>
-    }@else {
-        Hallo! Ich heiße Julien <br>
-        <div class="title">
-            FRONTEND<br>
-            DEVELOPER
-        </div>
-    }
-    </div>
-    <img src="./assets/img/Ellipse 9.png" class="ellipseBottomFromLandingPage">
-    <div class="scroll">
-        SCROLL
-        <div>
+        <img src="./assets/img/Ellipse 9.png" class="ellipseBottomFromLandingPage">
+        <div class="scroll">
+            SCROLL
+            <div>
 
+            </div>
         </div>
+        <!-- <div class="me">
+            <img src="./assets/img/Ich.png" class="me-img">
+        </div> -->
+        <app-social-media class="socialMediaContainer"></app-social-media>
     </div>
-    <div class="me">
-        <img src="./assets/img/Ich.png" class="me-img">
-    </div>
-    <app-social-media class="socialMediaContainer"></app-social-media>
 </section>

@@ -4,7 +4,8 @@ section {
     align-items: top;
     padding-top: 250px;
     margin-bottom: 80px;
-    // overflow-x: hidden;
+    max-width: 1920px;
+    width: 100vw;
 }
 
 .request {
@@ -23,14 +24,16 @@ section {
     font-weight: 400;
     font-size: 23px;
     max-width: 50vw;
-    display:flex;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
 }
 
 #self-presentation-german {
     flex-direction: column !important;
     align-items: center;
-    gap:20px;
-    display:flex;
+    gap: 20px;
+    display: flex;
 }
 
 .request-german {
@@ -43,12 +46,12 @@ section {
     min-width: 500px;
 }
 
-.right-side-of-self-presentation-german{
-    
+.right-side-of-self-presentation-german {
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom:20px;
+    padding-bottom: 20px;
     min-width: 300px;
 
     .button-container {
@@ -136,7 +139,8 @@ section {
 @media(max-width:1041px) {
 
     .request {
-        padding-left: 1vw;
+        font-size: 6em;
+        padding-left: 2vw;
         min-width: 0;
     }
 
@@ -150,27 +154,35 @@ section {
     }
 }
 
-@media(max-width:975px){
-    .request-german{
-        font-size:5em;
+@media(max-width:975px) {
+    .request-german {
+        font-size: 5em;
     }
 }
 
-@media(max-width:650px){
-    .request-german{
-        font-size:3em;
+@media(max-width:650px) {
+    .request {
+        line-height: 70px;
+    }
+
+    .request-german {
+        font-size: 3em;
+    }
+
+    .self-presentation {
+        margin-top: 0;
     }
 }
 
-@media(max-width:515px){
-    .request-german{
-        min-width:auto;
+@media(max-width:515px) {
+    .request-german {
+        min-width: auto;
     }
 }
 
-@media(max-width:460px){
-    .request-german{
-        font-size:2em;
+@media(max-width:460px) {
+    .request-german {
+        font-size: 2em;
     }
 }
 
@@ -207,7 +219,13 @@ section {
         top: 9%;
     }
 
-    .right-side-of-self-presentation{
-        padding-right:0;
+    .right-side-of-self-presentation {
+        padding-right: 0;
+    }
+
+    .request {
+        font-size: 4em;
+        padding: 0;
+        line-height: 70px;
     }
 }

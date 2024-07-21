@@ -15,30 +15,32 @@
             }
         </ul>
     </div>
-</section>
 
-<div class="burger-menu" [style.top]="burgerMenuClosed ? '10px' : '0px'">
-    <img src="./assets/img/burger_menu.png" [style.display]="burgerMenuClosed ? 'block' : 'none'"
-        (click)="openBurgerMenu()">
-    <div [style.display]="burgerMenuClosed ? 'none' : 'flex'">
-        <div class="close-burger-menu-button">
-            <img src="./assets/img/burger_close.png" [style.display]="burgerMenuClosed ? 'none' : 'flex'"
-                (click)="openBurgerMenu()">
-        </div>
-        <div class="burger-menu-links">
-            @if(language=='english'){
-            <a href="#self-presentation">About me</a>
-            <a href="#skillset">Skill set</a>
-            <a href="#mywork">My work</a>
-            <a href="#contact">Contact</a>
-            <div (click)="switchLanguage()"><a href="#"><img class="language" src="./assets/img/german.png"></a></div>
-            } @else {
-                <a href="#self-presentation">Über mich</a>
-                <a href="#skillset">Skills</a>
-                <a href="#mywork">Projekte</a>
-                <a href="#contact">Kontakt</a>
-            <div (click)="switchLanguage()"><a href="#"><img class="language" src="./assets/img/english.png"></a></div>
-            }
+    <div class="burger-menu" [style.top]="burgerMenuClosed ? '10px' : '0px'">
+        <img src="./assets/img/burger_menu.png" [style.display]="burgerMenuClosed ? 'block' : 'none'"
+            (click)="openBurgerMenu()">
+        <div [style.display]="burgerMenuClosed ? 'none' : 'flex'">
+            <div class="close-burger-menu-button">
+                <img src="./assets/img/burger_close.png" [style.display]="burgerMenuClosed ? 'none' : 'flex'"
+                    (click)="openBurgerMenu()">
+            </div>
+            <div class="burger-menu-links">
+                @if(language=='english'){
+                <a href="#self-presentation">About me</a>
+                <a href="#skillset">Skill set</a>
+                <a href="#mywork">My work</a>
+                <a href="#contact">Contact</a>
+                <div (click)="switchLanguage()"><a href="#"><img class="language" src="./assets/img/german.png"></a></div>
+                } @else {
+                    <a href="#self-presentation">Über mich</a>
+                    <a href="#skillset">Skills</a>
+                    <a href="#mywork">Projekte</a>
+                    <a href="#contact">Kontakt</a>
+                <div (click)="switchLanguage()"><a href="#"><img class="language" src="./assets/img/english.png"></a></div>
+                }
+            </div>
         </div>
     </div>
-</div>
+
+</section>
+

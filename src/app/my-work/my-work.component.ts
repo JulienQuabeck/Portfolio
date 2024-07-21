@@ -16,7 +16,7 @@ export class MyWorkComponent {
       title: 'Join',
       img: './assets/img/projects/JoinFrame.png',
       skills: 'HTML | SCSS | Angular | TypeScript | Firebase',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
+      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, and assign users and categories. ',
       descriptionGer: 'Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie Aufgaben mit Hilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.',
       git: 'https://github.com/JulienQuabeck/Join_Portfolio',
       url: 'http://join.julien-quabeck.de/html/index.html'
@@ -25,7 +25,7 @@ export class MyWorkComponent {
       title: 'El Pollo Loco',
       img: './assets/img/projects/EPLFrame.png',
       skills: 'HTML | CSS | Javascript',
-      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      description: 'Jump, run, and throw game based on an object-oriented approach. Help Pepe find coins and tabasco salsa to fight against the crazy hen.',
       descriptionGer: '"jump and run"-Spiel, dass auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.',
       git: 'https://github.com/JulienQuabeck/EPL_Portfolio',
       url: 'https://julien-quabeck.developerakademie.net/EPL/index.html'
