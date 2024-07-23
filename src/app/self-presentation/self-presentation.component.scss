@@ -134,6 +134,7 @@ section {
     position: absolute;
     left: 75%;
     top: 15%;
+    opacity:0.4;
 }
 
 @media(max-width:1041px) {
@@ -208,6 +209,11 @@ section {
         align-items: center;
     }
 
+    .self-presentation{
+        max-width:80vw;
+        font-size:20px;
+    }
+
     .request {
         margin-bottom: 50px;
     }
@@ -227,5 +233,9 @@ section {
         font-size: 4em;
         padding: 0;
         line-height: 70px;
+    }
+
+    .self-presentation {
+        max-width:90vw;
     }
 }

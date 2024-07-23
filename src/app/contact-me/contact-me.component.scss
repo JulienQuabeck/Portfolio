@@ -203,7 +203,7 @@ section {
     position: absolute;
     top: 400px;
     left: 242px;
-    opacity: 0.8;
+    opacity: 0.4;
 }
 
 .ellipse2 {
@@ -213,7 +213,7 @@ section {
     position: absolute;
     top: 700px;
     right: 150px;
-    opacity: 0.8;
+    opacity: 0.4;
 }
 
 .ellipse3 {
@@ -222,6 +222,7 @@ section {
     position: absolute;
     top: 700px;
     left: 31px;
+    opacity:0.4;
 
     &:hover {
         cursor: pointer;
@@ -417,6 +418,11 @@ section {
     .ellipse1 {
         top: 550px;
         left: 100px;
+    }
+
+    .ellipse2{
+        top:900px;
+        right:100px;
     }
 
     .arrow {
