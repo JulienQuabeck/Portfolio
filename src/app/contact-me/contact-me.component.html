@@ -7,32 +7,21 @@
     </div>
 
     <h1>
-        Contact
+        {{"contact_Headline" | translate}}
     </h1>
     <div class="content-container">
         <div class="left-container">
-            @if(language == 'english'){
-                <h2>Got a problem to solve?</h2>
-                <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to
-                    your projects with my work.</p>
-                <p class="highlighted-text">Need a Frontend developer? <b>Contact me!</b></p>
-            }@else {
-                <h2>Haben Sie ein Problem, welches gelöst werden soll?</h2>
-                <p>Dann nehmen Sie gleich mit Hilfe dieses Formulares mit mir Kontakt auf. Ich bin gespannt auf Ihre Ideen und darauf mit Ihnen zusammen an dem Projekt zu arbeiten!</p>
-                <p class="highlighted-text">Benötigen Sie einen Frontend-Developer? <b>melde dich!</b></p>
-            }
-
+            <h2>{{"contact_Headline2" | translate}}</h2>
+            <p>{{"contact_Description" | translate}}</p>
+            <p class="highlighted-text">{{"contact_Question" | translate}} <b>{{"contact_Answer" | translate}}</b></p>
         </div>
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <div class="right-container">
                 <div class="form-container">
-                    @if(language == 'english'){
-                        <label [ngClass]="{'label-active': isFocused['name'] || contactData.name}" for="name">your name</label>
-                    }@else {
-                        <label [ngClass]="{'label-active': isFocused['name'] || contactData.name}" for="name">Name</label>
-                    }
-                    <input #name='ngModel' id="name" autocomplete="off" [(ngModel)]="contactData.name" name="name" type="text"
-                        class="input-hover" required (focus)="onFocus('name')" (blur)="onBlur('name')">
+                    <label [ngClass]="{'label-active': isFocused['name'] || contactData.name}"
+                        for="name">{{"contact_Name-label" | translate}}</label>
+                    <input #name='ngModel' id="name" autocomplete="off" [(ngModel)]="contactData.name" name="name"
+                        type="text" class="input-hover" required (focus)="onFocus('name')" (blur)="onBlur('name')">
                     <div class="form-container-validation">
                         @if(!name.valid && name.touched){
                         <img src="./assets/img/bad.png">
@@ -43,12 +32,8 @@
                 </div>
 
                 <div class="form-container">
-                    @if(language == 'english'){
-                        <label [ngClass]="{'label-active': isFocused['email'] || contactData.email}" for="mail">your E-mail</label>
-                    }@else {
-                        <label [ngClass]="{'label-active': isFocused['email'] || contactData.email}" for="mail">E-Mail</label>
-                    }
-                    
+                    <label [ngClass]="{'label-active': isFocused['email'] || contactData.email}"
+                        for="mail">{{"contact_Email-label" | translate}}</label>
                     <input #email='ngModel' id="mail" [(ngModel)]="contactData.email" name="mail" type="email"
                         class="input-hover" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
                         (focus)="onFocus('email')" (blur)="onBlur('email')">
@@ -61,12 +46,8 @@
                     </div>
                 </div>
                 <div class="form-container">
-                    @if(language == 'english'){
-                        <label [ngClass]="{'label-active': isFocused['message'] || contactData.message}" for="message">your
-                            message</label>
-                    }@else {
-                        <label [ngClass]="{'label-active': isFocused['message'] || contactData.message}" for="message">Nachricht</label>
-                    }
+                    <label [ngClass]="{'label-active': isFocused['message'] || contactData.message}"
+                        for="message">{{"contact_Message-label" | translate}}</label>
                     <textarea #message='ngModel' [(ngModel)]="contactData.message" id="message" name="message"
                         class="input-hover" required (focus)="onFocus('message')" (blur)="onBlur('message')"></textarea>
                     <div class="form-container-validation">
@@ -77,62 +58,36 @@
                         }@else {}
                     </div>
                 </div>
-                @if(language == 'english'){
-                    @if(!name.valid && name.touched && !name.disabled){
-                        <span class="errorMessage">Please enter your name</span>
-                        }
-                        @if (!email.valid && email.touched && !email.disabled) {
-                        <span class="errorMessage">Please enter you E-mail</span>
-                        }
-                        @if(!message.valid && message.touched && !message.disabled){
-                        <span class="errorMessage">Please enter a message</span>
-                        }
-                }@else {
-                    @if(!name.valid && name.touched && !name.disabled){
-                        <span class="errorMessage">Bitte gib deinen Namen ein.</span>
-                        }
-                        @if (!email.valid && email.touched && !email.disabled) {
-                        <span class="errorMessage">Bitte gib deine E-Mail-Addresse ein.</span>
-                        }
-                        @if(!message.valid && message.touched && !message.disabled){
-                        <span class="errorMessage">Bitte gib eine Nachricht ein.</span>
-                        }
+                @if(!name.valid && name.touched && !name.disabled){
+                <span class="errorMessage">{{"contact_NameError" | translate}}</span>
                 }
-
+                @if (!email.valid && email.touched && !email.disabled) {
+                <span class="errorMessage">{{"contact_MailError" | translate}}</span>
+                }
+                @if(!message.valid && message.touched && !message.disabled){
+                <span class="errorMessage">{{"contact_MessageError" | translate}}</span>
+                }
                 <div class="privacy-policy-container">
                     <div class="checkbox-container">
                         <input #checkbox='ngModel' [(ngModel)]="checked" name="checkbox" id="privacy-policy-checkbox"
                             class="checkbox" type="checkbox" (click)="checkCheckbox()">
                     </div>
                     <div class="privacy-policy">
-                        @if(language == 'english'){
-                            I've read the privacy policy and agree to the processing of my
-                            data as outlined.
-                        }@else {
-                            Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner
-                            Daten wie beschrieben zu.
-                        }
+                        {{"contact_PrivacyPolicy-declaration" | translate}}
                     </div>
                 </div>
                 <div class="error-message-container">
-                    @if(language == 'english'){
-                        @if(showPrivacyPolicyError && name.valid && email.valid && message.valid){
-                            <span class="errorMessage">Please accept the privacy policy.</span>
-                            }@else {}
-                    }@else {
-                        @if(showPrivacyPolicyError && name.valid && email.valid && message.valid){
-                            <span class="errorMessage">Bitte akzeptieren Sie die Datenschutzbestimmungen.</span>
-                            }@else {}
+                    @if(showPrivacyPolicyError && name.valid && email.valid && message.valid){
+                    <span class="errorMessage">{{"contact_PrivacyPolicyError" | translate}}</span>
                     }
-
                 </div>
                 <div class="button-container">
                     @if(language == 'english'){
-                        <button type="submit" value="submit"
+                    <button type="submit" value="submit"
                         [ngClass]="{'allValid': name.valid && email.valid && message.valid && this.checked}"
-                        class="say-hello-button">Say hello ;)</button>
+                        class="say-hello-button">{{"contact_Button" |translate}}</button>
                     }@else {
-                        <button type="submit" value="submit"
+                    <button type="submit" value="submit"
                         [ngClass]="{'allValid': name.valid && email.valid && message.valid && this.checked}"
                         class="say-hello-button">Sag Hallo ;)</button>
                     }

@@ -1,10 +1,6 @@
 <section id="mywork">
     <div class="title-and-description">
-        @if(language == 'english'){
-            <h1>My work</h1>
-        }@else {
-            <h1>Meine Projekte</h1>
-        }
+            <h1>{{'myWork_Headline' | translate}}</h1>
 
         <img src="./assets/img/Ellipse 9.png" class="ellipse1">
         <img src="./assets/img/Ellipse 9.png" class="ellipse2">
@@ -12,11 +8,7 @@
         <img src="./assets/img/Ellipse 9.png" class="ellipse4">
         <img src="./assets/img/Ellipse 9.png" class="ellipse5">
         <div class="introduction">
-            @if(language == 'english'){
-                Explore a selection of my work here - Interact with <br> projects to see my skills in action
-            }@else {
-                Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit <br> Projekten, um meine Fähigkeiten in Aktion zu sehen.
-            }
+                {{'myWork_description' | translate}}
         </div>
     </div>
     <div class="projects">

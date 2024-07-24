@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-my-work',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './my-work.component.html',
   styleUrl: './my-work.component.scss'
 })

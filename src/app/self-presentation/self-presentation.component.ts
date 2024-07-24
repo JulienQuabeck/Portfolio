@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-self-presentation',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './self-presentation.component.html',
   styleUrl: './self-presentation.component.scss'
 })

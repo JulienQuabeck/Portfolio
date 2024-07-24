@@ -1,21 +1,13 @@
 <section id="landing-page" class="main">
     <div class="content">
         <img src="./assets/img/Ellipse 9.png" class="ellipseBehindPicture">
-        <app-header (sentlanguage)="switchLanguage()"></app-header>
+        <app-header></app-header>
         <div class="name">
-            @if(language == 'english'){
-            Hello! I am Julien <br>
+            {{'landingPage_Hello' | translate}}<br>
             <div class="title">
                 FRONTEND<br>
                 DEVELOPER
             </div>
-            }@else {
-            Hallo! Ich heiße Julien <br>
-            <div class="title">
-                FRONTEND<br>
-                DEVELOPER
-            </div>
-            }
         </div>
         <img src="./assets/img/Ellipse 9.png" class="ellipseBottomFromLandingPage">
         <div class="scroll">

@@ -2,17 +2,10 @@
     <img class="logo" src="./assets/img/logo.png">
     <div class="normal-header">
         <ul>
-            @if(language=='english'){
-            <li><a href="#self-presentation">About me</a></li>
-            <li><a href="#skillset">Skill set</a></li>
-            <li><a href="#mywork">My work</a></li>
-            <li (click)="switchLanguage()"><a href="#"><img class="language" src="./assets/img/german.png"></a></li>
-            } @else {
-            <li><a href="#self-presentation">Über mich</a></li>
-            <li><a href="#skillset">Skills</a></li>
-            <li><a href="#mywork">Projekte</a></li>
-            <li (click)="switchLanguage()"><a href="#"><img class="language" src="./assets/img/english.png"></a></li>
-            }
+            <li><a href="#self-presentation">{{'header_AboutMe' | translate }}</a></li>
+            <li><a href="#skillset">{{'header_Skills' | translate }}</a></li>
+            <li><a href="#mywork">{{'header_Work' | translate }}</a></li>
+            <li (click)="changeLanguage()"><a href="#"><img class="language" src="{{'header_Flag'| translate}}"></a></li>
         </ul>
     </div>
 
@@ -25,19 +18,11 @@
                     (click)="openBurgerMenu()">
             </div>
             <div class="burger-menu-links">
-                @if(language=='english'){
-                <a href="#self-presentation">About me</a>
-                <a href="#skillset">Skill set</a>
-                <a href="#mywork">My work</a>
-                <a href="#contact">Contact</a>
-                <div (click)="switchLanguage()"><a href="#"><img class="language" src="./assets/img/german.png"></a></div>
-                } @else {
-                    <a href="#self-presentation">Über mich</a>
-                    <a href="#skillset">Skills</a>
-                    <a href="#mywork">Projekte</a>
-                    <a href="#contact">Kontakt</a>
-                <div (click)="switchLanguage()"><a href="#"><img class="language" src="./assets/img/english.png"></a></div>
-                }
+                <a href="#self-presentation">{{'header_AboutMe' | translate }}</a>
+                <a href="#skillset">{{'header_Skills' | translate }}</a>
+                <a href="#mywork">{{'header_Work' | translate }}</a>
+                <a href="#contact">{{'header_Contact' | translate }}</a>
+                <div (click)="changeLanguage()"><a href="#"><img class="language" src="{{'header_Flag'| translate}}"></a></div>
             </div>
         </div>
     </div>

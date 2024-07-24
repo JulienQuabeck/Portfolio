@@ -1,13 +1,36 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
+
 export class HeaderComponent {
+
+  private translateService = inject(TranslateService);
+
+  ngOnInit(): void {
+    const defaultLang = localStorage.getItem('language') || 'en';
+    this.translateService.setDefaultLang(defaultLang);
+    this.translateService.use(defaultLang);  
+  }
+
+  changeLanguage(){
+    let language = localStorage.getItem('language') || 'en';
+    if(language == 'en'){
+      language = 'de';
+    }else{
+      language = 'en';
+    }
+    this.translateService.use(language);
+    localStorage.setItem('language', language);
+  }
+
+
 
   @Output() sentlanguage = new EventEmitter;
 
