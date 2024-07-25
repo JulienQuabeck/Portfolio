@@ -5,11 +5,12 @@ import { SelfPresentationComponent } from '../self-presentation/self-presentatio
 import { SkillsetComponent } from '../skillset/skillset.component';
 import { MyWorkComponent } from '../my-work/my-work.component';
 import { ContactMeComponent } from '../contact-me/contact-me.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [FooterComponent, LandingPageComponent, SelfPresentationComponent, SkillsetComponent, MyWorkComponent, ContactMeComponent],
+  imports: [FooterComponent, LandingPageComponent, SelfPresentationComponent, SkillsetComponent, MyWorkComponent, ContactMeComponent, TranslateModule],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })

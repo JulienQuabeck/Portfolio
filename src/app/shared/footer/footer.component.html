@@ -3,14 +3,8 @@
         <a href="#landing-page"><img class="logo" src="./assets/img/logo.png"></a>
         <div class="info">
             <p>© Julien Quabeck 2024</p>
-            @if(language == 'english'){
-            <a href="Imprint">imprint</a>
-            <a href="Privacy-Policy">privacy policy</a>
-            }@else {
-            <a href="Imprint">Impressum</a>
-            <a href="Privacy-Policy">Datenschutzerklärung</a>
-            }
-
+            <a href="Imprint">{{"FooterImprint" | translate}}</a>
+            <a href="Privacy-Policy">{{"FooterPrivacyPolicy" | translate}}</a>
         </div>
         <div class="social-media">
             <a href="https://github.com/JulienQuabeck" target="_blank"><img src="./assets/img/git_white.png"></a>
