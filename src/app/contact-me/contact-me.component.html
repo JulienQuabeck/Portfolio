@@ -82,26 +82,18 @@
                     }
                 </div>
                 <div class="button-container">
-                    @if(language == 'english'){
                     <button type="submit" value="submit"
                         [ngClass]="{'allValid': name.valid && email.valid && message.valid && this.checked}"
                         class="say-hello-button">{{"contact_Button" |translate}}</button>
-                    }@else {
-                    <button type="submit" value="submit"
-                        [ngClass]="{'allValid': name.valid && email.valid && message.valid && this.checked}"
-                        class="say-hello-button">Sag Hallo ;)</button>
-                    }
                 </div>
             </div>
         </form>
-    </div>
-    <!-- @if(mailSuccessfullySent){ -->
-    <div class="sendMailsucceed" [ngClass]="{'sendMailsucceedShow':mailSuccessfullySent}">
-        <div>
-            <h1>E-mail sent successfully</h1>
-            Thank you for your E-Mail!<br />
-            I will reply as soon as possible!
+        <div class="sendMailsucceed" [ngClass]="{'sendMailsucceedShow':mailSuccessfullySent}">
+            <div>
+                <h1>{{"MailSentHeadline" | translate}}</h1>
+                {{"MailSentThanks" | translate}}<br />
+                {{"MailSentText" | translate}}
+            </div>
         </div>
     </div>
-    <!-- } -->
 </section>

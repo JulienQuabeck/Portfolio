@@ -85,5 +85,8 @@
     "PP_RightTORestrictionText2" : "Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten Daten bestreiten, werden wir in der Regel Zeit benötigen, um diese zu überprüfen. Für die Dauer der Überprüfung haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer Daten zu verlangen. Wenn die Verarbeitung Ihrer Daten unrechtmäßig erfolgt ist/wird, können Sie anstelle der Löschung die Einschränkung der Datenverarbeitung verlangen. Wenn wir Ihre Daten nicht mehr benötigen, Sie diese aber zur Geltendmachung, Verteidigung oder Durchsetzung von Rechtsansprüchen benötigen, haben Sie die Geltendmachung von Rechtsansprüchen und das Recht, anstelle der Löschung die Einschränkung der Verarbeitung der Verarbeitung Ihrer Daten zu verlangen. Haben Sie Widerspruch nach Art. 21 Abs.. 1 DSGVO Widerspruch eingelegt haben, muss eine Abwägung zwischen Ihren und unseren Interessen vorgenommen werden. Solange noch nicht geklärt ist, wessen Interessen überwiegen, haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer Daten zu verlangen. Wenn Sie die Verarbeitung Ihrer Daten eingeschränkt haben, dürfen diese Daten - abgesehen von ihrer Speicherung - nur mit Ihrer Einwilligung oder zur Begründung, Ausübung oder Verteidigung von Rechtsansprüchen oder zum Schutz der Rechte einer anderen natürlichen oder juristischen Person oder aus Gründen eines wichtigen öffentlichen Interesses der Europäischen Union oder eines Mitgliedstaats verarbeitet werden. Interesse der Europäischen Union oder eines Mitgliedstaates.",
     "FooterImprint" : "Impressum",
     "FooterPrivacyPolicy" : "Datenschutzerklärung",
-    "turnDevice" : "Bitte drehen Sie das Smartphone!"
+    "turnDevice" : "Bitte drehen Sie das Smartphone!",
+    "MailSentHeadline" : "E-mail wurde erfolgreich versendet",
+    "MailSentThanks" : "Danke für Ihre E-Mail!",
+    "MailSentText" : "Ich werde Ihnen schnellstmöglich antworten"
 }

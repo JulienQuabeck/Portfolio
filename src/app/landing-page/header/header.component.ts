@@ -20,6 +20,7 @@ export class HeaderComponent {
   }
 
   changeLanguage(){
+    debugger
     let language = localStorage.getItem('language') || 'en';
     if(language == 'en'){
       language = 'de';
@@ -30,14 +31,8 @@ export class HeaderComponent {
     localStorage.setItem('language', language);
   }
 
-
-
-  @Output() sentlanguage = new EventEmitter;
-
   burgerMenuClosed = true;
   language = 'english';
-
-
 
   openBurgerMenu() {
     if (this.burgerMenuClosed == true) {
@@ -47,18 +42,4 @@ export class HeaderComponent {
     }
 
   }
-
-  switchLanguage() {
-    if (this.language == 'english') {
-      this.language = 'german';
-    } else {
-      this.language = 'english';
-    }
-    this.sendLanguageToParent();
-  }
-
-  sendLanguageToParent() {
-    this.sentlanguage.emit();
-  }
-
 }

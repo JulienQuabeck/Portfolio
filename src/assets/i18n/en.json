@@ -85,5 +85,8 @@
     "PP_RightTORestrictionText2" : "If you dispute the accuracy of your data stored by us, we will need as a rule usually time to check this. For the duration of the review, you have the right to request the restriction of processing of your processing of your data. If the processing of your data has occurred/is occurring unlawfully, you can request the erasure of your data instead of the erasure the request the restriction of data processing. If we no longer need your data, but you need it for the exercise, defense, or assertion of legal claims, you have the assertion of legal claims, and you have the right to request the restriction of the processing of the processing of your data instead of erasure. If you have objected under Art. 21 para. 1 GDPR, a balance must be struck between your and our interests must be carried out. As long as it has not yet been determined whose interests prevail, you have the right to request the restriction of the processing of your data. If you have restricted the processing of your data, this data - from its Apart from its storage, this data may only be processed with your consent or for the establishment, exercise, or defense of legal claims or the protection of the rights of another natural or legal person or for reasons of important public interest of the European Union or of a Member State. Interest of the European Union or a Member State.",
     "FooterImprint" : "Imprint",
     "FooterPrivacyPolicy" : "privacy policy",
-    "turnDevice" : "please turn your device!"
+    "turnDevice" : "please turn your device!",
+    "MailSentHeadline" : "E-mail sent successfully",
+    "MailSentThanks" : "Thank you for your E-Mail!",
+    "MailSentText" : "I will reply as soon as possible!"
 }
