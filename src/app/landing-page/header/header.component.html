@@ -1,31 +1,31 @@
 <section class="header">
-    <img class="logo" src="./assets/img/logo.png">
-    <div class="normal-header">
-        <ul>
-            <li><a href="#self-presentation">{{'header_AboutMe' | translate }}</a></li>
-            <li><a href="#skillset">{{'header_Skills' | translate }}</a></li>
-            <li><a href="#mywork">{{'header_Work' | translate }}</a></li>
-            <li (click)="changeLanguage()"><a href="#"><img class="language" src="{{'header_Flag'| translate}}"></a></li>
-        </ul>
-    </div>
+    <div class="content">
+        <img class="logo" src="./assets/img/logo.png">
+        <div class="normal-header">
+            <ul>
+                <li><a href="#self-presentation">{{'header_AboutMe' | translate }}</a></li>
+                <li><a href="#skillset">{{'header_Skills' | translate }}</a></li>
+                <li><a href="#mywork">{{'header_Work' | translate }}</a></li>
+                <li (click)="changeLanguage()"><img class="language" src="{{'header_Flag'| translate}}"></li>
+            </ul>
+        </div>
 
-    <div class="burger-menu" [style.top]="burgerMenuClosed ? '10px' : '0px'">
-        <img src="./assets/img/burger_menu.png" [style.display]="burgerMenuClosed ? 'block' : 'none'"
-            (click)="openBurgerMenu()">
-        <div [style.display]="burgerMenuClosed ? 'none' : 'flex'">
-            <div class="close-burger-menu-button">
-                <img src="./assets/img/burger_close.png" [style.display]="burgerMenuClosed ? 'none' : 'flex'"
-                    (click)="openBurgerMenu()">
-            </div>
-            <div class="burger-menu-links">
-                <a href="#self-presentation">{{'header_AboutMe' | translate }}</a>
-                <a href="#skillset">{{'header_Skills' | translate }}</a>
-                <a href="#mywork">{{'header_Work' | translate }}</a>
-                <a href="#contact">{{'header_Contact' | translate }}</a>
-                <div (click)="changeLanguage()"><a href="#"><img class="language" src="{{'header_Flag'| translate}}"></a></div>
+        <div class="burger-menu" [style.top]="burgerMenuClosed ? '10px' : '0px'">
+            <img src="./assets/img/burger_menu.png" [style.display]="burgerMenuClosed ? 'block' : 'none'"
+                (click)="openBurgerMenu()">
+            <div [style.display]="burgerMenuClosed ? 'none' : 'flex'">
+                <div class="close-burger-menu-button">
+                    <img src="./assets/img/burger_close.png" [style.display]="burgerMenuClosed ? 'none' : 'flex'"
+                        (click)="openBurgerMenu()">
+                </div>
+                <div class="burger-menu-links">
+                    <a href="#self-presentation">{{'header_AboutMe' | translate }}</a>
+                    <a href="#skillset">{{'header_Skills' | translate }}</a>
+                    <a href="#mywork">{{'header_Work' | translate }}</a>
+                    <a href="#contact">{{'header_Contact' | translate }}</a>
+                    <div (click)="changeLanguage()"><img class="language" src="{{'header_Flag'| translate}}"></div>
+                </div>
             </div>
         </div>
     </div>
-
 </section>
-

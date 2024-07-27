@@ -82,6 +82,12 @@ app-social-media {
     top: 789px;
 }
 
+app-header{
+    position:absolute;
+    left:0;
+    right:0;
+}
+
 .me{
     position:relative;
     left:0;
@@ -95,7 +101,7 @@ app-social-media {
 
 .me-img {
     position: absolute;
-    bottom: 116px;
+    bottom: 0px;
     z-index: 900;
     margin-left:50px;
     object-fit: cover;
@@ -109,7 +115,7 @@ app-social-media {
 
     .me-img{
         transform:scale(0.9);
-        bottom:60px;
+        bottom:-60px;
     }
 }
 
@@ -126,7 +132,7 @@ app-social-media {
 @media(max-width:1250px){
     .me-img{
         transform:scale(0.6);
-        bottom:-116px;
+        bottom:-225px;
     }
 }
 
@@ -241,7 +247,7 @@ app-social-media {
 @media(max-width:450px){
     .me-img{
         transform: scale(0.4);
-        bottom:-220px;
+        bottom:-337px;
     }
 }
 

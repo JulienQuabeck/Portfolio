@@ -17,7 +17,6 @@ export class ImprintComponent {
   constructor() {
     this.checkLandscapeMode();
 
-
     window.addEventListener('resize', () => this.checkLandscapeMode());
     window.addEventListener('orientationchange', () => this.checkLandscapeMode());
     document.addEventListener('DOMContentLoaded', () => this.checkLandscapeMode());

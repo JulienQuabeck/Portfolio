@@ -20,7 +20,6 @@ export class HeaderComponent {
   }
 
   changeLanguage(){
-    debugger
     let language = localStorage.getItem('language') || 'en';
     if(language == 'en'){
       language = 'de';
