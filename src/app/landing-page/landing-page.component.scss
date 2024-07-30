@@ -1,39 +1,15 @@
-.main{
-    width:100vw;
+.main {
+    width: 100vw;
     background-image: linear-gradient(to bottom, white 0%, rgb(240, 239, 239) 90%);
-    display:flex;
+    display: flex;
     justify-content: center;
 }
 
 .content {
     position: relative;
     width: 100vw;
-    max-width:1920px;
+    max-width: 1920px;
     height: 100vh;
-}
-
-.name {
-    font-family: 'montseerat', sans-serif;
-    font-size: 64px;
-    font-weight: 400;
-    line-height: 64px;
-    text-align: left;
-    color: #5988FF;
-    position: absolute;
-    width: 645px;
-    height: 61px;
-    top: 227px;
-    left: 42%;
-    z-index:998;
-}
-
-.title {
-    font-family: 'Baloo 2', sans-serif;
-    font-size: 128px;
-    font-weight: 800;
-    line-height: 153.6px;
-    letter-spacing: -0.025em;
-    text-align: left;
 }
 
 .ellipseBehindPicture {
@@ -44,12 +20,81 @@
     left: -199px;
 }
 
+.ellipseBottomFromLandingPage {
+    position: absolute;
+    width: 206px;
+    height: 206px;
+    bottom: -103px;
+    left: 50%;
+}
+
+app-header {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.GreetingAndImg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-right: 50px;
+}
+
+.me {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    img {
+        position: absolute;
+        bottom: 0;
+        z-index: 900;
+        margin-left: 50px;
+        object-fit: cover;
+        width: auto;
+        height: 150%;
+        filter: drop-shadow(1px 1px 10px #5988FF);
+    }
+}
+
+.nameAndTitle {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    font-family: 'montseerat', sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 64px;
+    text-align: left;
+    color: #5988FF;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    padding-right: 50px;
+}
+
+.name,
+.title {
+    font-family: 'baloo 2', sans-serif;
+}
+
+app-social-media {
+    position: absolute;
+    right: 200px;
+    top: 789px;
+}
+
 .scroll {
     position: absolute;
     top: 70%;
-    left: 70%;
-    bottom:0;
-    width:50px;
+    left: 50%;
+    bottom: 0;
+    width: 50px;
     font-family: 'montserrat', sans-serif;
     color: #5988FF;
     font-weight: 500;
@@ -59,200 +104,94 @@
     align-items: center;
 
     div {
-        position:absolute;
-        bottom:0;
-        top:25px;
+        position: absolute;
+        bottom: 0;
+        top: 25px;
         width: 1px;
         background-color: #5988FF;
         border: 2px solid #5988FF;
     }
 }
 
-.ellipseBottomFromLandingPage {
-    position: absolute;
-    width: 206px;
-    height: 206px;
-    bottom: -103px;
-    left: 50%;
-}
-
-app-social-media {
-    position: absolute;
-    right: 200px;
-    top: 789px;
-}
-
-app-header{
-    position:absolute;
-    left:0;
-    right:0;
-}
-
-.me{
-    position:relative;
-    left:0;
-    bottom:0px;
-    height:100vh;
-    width:80vw;
-    display:flex;
-    justify-content: flex-start;
-    object-fit: cover;
-}
-
-.me-img {
-    position: absolute;
-    bottom: 0px;
-    z-index: 900;
-    margin-left:50px;
-    object-fit: cover;
-}
-
-@media(max-width: 1650px){
-    .ellipseBehindPicture{
-        width:600px;
-        height:600px;
+@media(max-width:1400px) {
+    .scroll {
+        left: 75%;
     }
 
-    .me-img{
-        transform:scale(0.9);
-        bottom:-60px;
+    .socialMediaContainer {
+        right: 10%;
     }
 }
 
-@media (max-width: 1475px){
-    .name{
-        left:40%;
-        font-size:56px;
-        div{
-            font-size:106px;
-        }
-    }
-}
-
-@media(max-width:1250px){
-    .me-img{
-        transform:scale(0.6);
-        bottom:-225px;
-    }
-}
-
-@media(max-width: 1180px){
-    .name{
-        left:20%;
-        font-size:56px;
-        div{
-            font-size:106px;
+@media (max-width:1100px) {
+    .me {
+        img {
+            height: 100%;
         }
     }
 
     .ellipseBehindPicture{
-        width:350px;
-        height:350px;
+        width:700px;
+        height:700px;
     }
 }
 
-@media(max-width:1050px){
-    .socialMediaContainer{
-        right:100px;
-    }
-
-    .me-img{
-        left:-120px;
+@media (max-width:850px) {
+    .scroll {
+        left: 70%;
     }
 }
 
-@media(max-width:900px){
-    .name{
-        left:10%;
+@media(max-width:700px) {
+    .nameAndTitle {
+        left: 50%;
+        transform: translateX(-50%);
     }
 
-    .scroll{
-        left:75%;
+    .scroll {
+        display: none;
     }
 }
 
-@media(max-width:840px){
-    .scroll{
-        display:none;
-    }
-
-    .ellipseBottomFromLandingPage{
-        display:none;
-    }
-
-    .socialMediaContainer{
-        display:none;
+@media(max-width:550px) {
+    .socialMediaContainer {
+        display: none;
     }
 
     .ellipseBehindPicture{
-        right:0;
-    }
-
-    .me-img{
-        left:5%;
-    }
-
-    .name{
-        font-size:40px;
-        left:5%;
-        div{
-            font-size:80px;
-            line-height: 90px;
-        }
+        width:500px;
+        height:500px;
     }
 }
 
-@media(max-width:700px){
-    .ellipseBehindPicture{
-        height:65vh;
-        width:125vw;
-    }
-
-    .name{
-        color:white;
-        text-shadow: -1px 0 #5988FF, 0 1px #5988FF, 1px 0 #5988FF, 0 -1px #5988FF;
-        font-size:30px;
-        div{
-            font-size:60px;
+@media(max-width:450px) {
+    .me {
+        img {
+            height: 80%;
+            left: 0%;
         }
     }
 
-    .me-img{
-        left:0;
-        margin-left:0;
+    .nameAndTitle {
+        font-size: 50px;
     }
 }
 
-@media(max-width:610px){
-    .name{
-        font-size:20px;
-        div{
-            font-size:40px;
+@media(max-width:350px) {
+    .me {
+        img {
+            left: -25%;
         }
     }
-}
 
-@media(max-width:550px){
-    .me-img{
-        left:-50px;
+    .nameAndTitle {
+        left: 45%;
     }
 }
 
-@media(max-width:500px){
-    .me-img{
-        left:-100px;
-    }
-}
-
-@media(max-width:450px){
-    .me-img{
-        transform: scale(0.4);
-        bottom:-337px;
-    }
-}
-
-@media(max-width:390px){
-    .me-img{
-        left:-150px;
+@media(max-height:950px) {
+    .nameAndTitle {
+        font-size: 40px;
+        line-height: 50px;
     }
 }
