@@ -4,6 +4,7 @@ section {
     text-align: center;
     max-width: 1920px;
     width: 100vw;
+    //background-color:rgb(255, 178, 178);
 
     h1 {
         font-weight: 400px;
@@ -230,12 +231,18 @@ section {
     }
 }
 
+.arrow-container{
+    position:absolute;
+    bottom:150px;
+    left:100px;
+    width:39px;
+    height:39px;
+}
+
 .arrow {
+    display:flex;
     width: 39px;
     height: 39px;
-    position: absolute;
-    top: 710px;
-    left: 41px;
     background-image: url('../../assets/img/arrow.png');
 
     &:hover {
@@ -333,14 +340,21 @@ section {
         top: 500px;
     }
 
-    .arrow {
-        top: 1000px;
-    }
-
     .left-container {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .arrow-container{
+        bottom:0;
+        left:0;
+    }
+}
+
+@media (max-width:900px){
+    .arrow-container{
+        left:50px;
     }
 }
 
@@ -371,10 +385,6 @@ section {
         }
     }
 
-    .arrow {
-        top: 980px;
-    }
-
     .privacy-policy-container {
         &:hover {
             input {
@@ -389,10 +399,6 @@ section {
         padding-left: 50px;
         padding-right: 50px;
     }
-
-    .arrow {
-        top: 990px;
-    }
 }
 
 @media(max-width:500px) {
@@ -401,10 +407,6 @@ section {
         input,
         textarea {
             width: 200px;
-
-            &:hover {
-                // width:200px !important;
-            }
         }
 
         .input-hover {
@@ -423,23 +425,6 @@ section {
         top:900px;
         right:100px;
     }
-
-    .arrow {
-        top: 1100px;
-    }
-}
-
-@media(max-width:437px) {
-    .arrow {
-        left: 10px;
-        top: 1045px;
-    }
-}
-
-@media(max-width:395px) {
-    .arrow {
-        top: 1060px;
-    }
 }
 
 @media(max-width:370px) {
@@ -448,10 +433,6 @@ section {
         h1 {
             font-size: 80px;
         }
-    }
-
-    .arrow {
-        top: 1100px;
     }
 
     .button-container {
