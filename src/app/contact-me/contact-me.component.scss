@@ -293,6 +293,7 @@ section {
     width: 100%;
     opacity: 0; 
     transition: opacity 1s ease-in-out;
+    transition: z-index 0.1s;
 
     h1 {
         letter-spacing: 10px;
@@ -355,6 +356,10 @@ section {
 @media (max-width:900px){
     .arrow-container{
         left:50px;
+    }
+
+    .form-container{
+        margin-left:10px;
     }
 }
 

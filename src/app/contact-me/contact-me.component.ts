@@ -27,11 +27,10 @@ export class ContactMeComponent {
   checkboxChecked = false;
   showPrivacyPolicyError = false;
   isFocused: any = { 'name': false, 'email': false, 'message': false };
-  mailTest = true;
   mailSuccessfullySent = false;
 
   post = {
-    endPoint: 'http://julien-quabeck.de/sendMail.php',
+    endPoint: 'https://julien-quabeck.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -59,7 +58,7 @@ export class ContactMeComponent {
    * @param ngForm 
    */
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && this.checked && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid && this.checked) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -71,10 +70,7 @@ export class ContactMeComponent {
           },
           complete: () => this.mailSent(),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.checked && this.mailTest) {
-      this.mailSent();
-      ngForm.resetForm();
-    } else if (ngForm.submitted && ngForm.form.valid && !this.checked && this.mailTest) {
+    } else if (ngForm.submitted && ngForm.form.valid && !this.checked) {
       this.showPrivacyPolicyError = true;
     }
   }
