@@ -1,4 +1,4 @@
-import { Component, EventEmitter, inject, Output } from '@angular/core';
+import { AfterViewChecked, AfterViewInit, Component, ElementRef, EventEmitter, inject, Output, ViewChild } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -9,8 +9,10 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './header.component.scss'
 })
 
-export class HeaderComponent {
+//ViewChild, ElementRef
 
+export class HeaderComponent {
+//implements AfterViewInit
   private translateService = inject(TranslateService);
 
   ngOnInit(): void {
@@ -39,6 +41,39 @@ export class HeaderComponent {
     } else {
       this.burgerMenuClosed = true;
     }
-
   }
+
+
+  // @ViewChild('self-presentation', { static: false }) section1!: ElementRef;
+  // @ViewChild('skillset', { static: false }) section2!: ElementRef;
+  // @ViewChild('mywork', { static: false }) section3!: ElementRef;
+  // @ViewChild('contact', { static: false }) section4!: ElementRef;
+
+  // ngAfterViewInit() {
+  //   // ViewChilds sind nun initialisiert
+  // }
+
+  // scrollToSection(sectionId: string): void {
+  //   const sectionMap: { [key: string]: ElementRef } = {
+  //     section1: this.section1,
+  //     section2: this.section2,
+  //     section3: this.section3,
+  //     section4: this.section4
+  //   };
+
+  //   const element = sectionMap[sectionId]?.nativeElement;
+  //   if (element) {
+  //     const headerOffset = 117; // Höhe des Headers
+  //     const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+  //     const offsetPosition = elementPosition - headerOffset;
+
+  //     window.scrollTo({
+  //       top: offsetPosition,
+  //     });
+  //   }
+  // }
+
+
+
+
 }

@@ -186,14 +186,30 @@
 
   html{
     scroll-behavior: smooth;
-    // overflow-x:hidden;
   }
 
   body{
     margin:0;
     font-family: 'Baloo 2', sans-serif;
+    overflow-x:hidden;
   }
 
   .main-font-color{
     color: #5988FF;
   }
+
+  ::-webkit-scrollbar{
+    background-color:whitesmoke;
+    width:5px;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background-color:#5988FF;
+    border-radius:10px;
+  }
+
+  .offset{
+    height:117px;
+    display: block;
+    visibility: hidden;
+}

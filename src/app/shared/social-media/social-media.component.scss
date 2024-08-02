@@ -8,8 +8,53 @@
         img {
             &:hover {
                 cursor: pointer;
-                transform: translatex(-10px)
+                // transform: translatex(-10px)
             }
         }
     }
+}
+
+.delay{
+    animation: jumping 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+.delay1 {
+    animation-delay: 0.33s;
+}
+
+.delay2 {
+    animation-delay: 0.66s;
+}
+
+@keyframes jumping {
+    0% {
+        transform: translatex(0px);
+    }
+
+    20% {
+        transform: translatex(-2px);
+    }
+
+    40% {
+        transform: translatex(-4px);
+    }
+
+    50% {
+        transform: translatex(-6px);
+    }
+
+    60% {
+        transform: translatex(-4px);
+    }
+
+    80% {
+        transform: translatex(-2);
+    }
+
+    100% {
+        transform: translatex(0px);
+    }
+
 }

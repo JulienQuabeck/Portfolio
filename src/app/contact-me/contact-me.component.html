@@ -1,4 +1,5 @@
-<section id="contact">
+<div id="contact" class="offset"></div>
+<section class="contact">
     <img src="../../assets/img/Ellipse 9.png" class="ellipse1">
     <img src="../../assets/img/Ellipse 9.png" class="ellipse2">
 
@@ -72,8 +73,10 @@
                         <input #checkbox='ngModel' [(ngModel)]="checked" name="checkbox" id="privacy-policy-checkbox"
                             class="checkbox" type="checkbox" (click)="checkCheckbox()">
                     </div>
-                    <div class="privacy-policy">
-                        {{"contact_PrivacyPolicy-declaration" | translate}}
+                    <div class="privacy-policy" ng-bind-html="translatedText">
+                        {{"contact_PrivacyPolicy-declaration1" | translate}}
+                        <a href="/Privacy-Policy" target="blank">{{"contact_PrivacyPolicy-declaration2" | translate}}</a>
+                        {{"contact_PrivacyPolicy-declaration3" | translate}}
                     </div>
                 </div>
                 <div class="error-message-container">
