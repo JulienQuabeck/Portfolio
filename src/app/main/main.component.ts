@@ -22,23 +22,17 @@ export class MainComponent {
     window.addEventListener('resize', () => this.checkLandscapeMode());
     window.addEventListener('orientationchange', () => this.checkLandscapeMode());
     document.addEventListener('DOMContentLoaded', () => this.checkLandscapeMode());
-}
-
-  language: string  = 'english';
-  landscapeMode: boolean = false;
-
-  switchLanguage() {
-    if(this.language == 'english'){
-      this.language = 'german';
-    }else{
-      this.language = 'english';
-    }
   }
 
-  checkLandscapeMode(){
-    if(window.innerHeight < window.innerWidth && window.innerWidth < 768){
+  landscapeMode: boolean = false;
+
+  /**
+  * This function checks, if the mobile device is in langsacpe mode, if yes it will display an information to turn the device
+  */
+  checkLandscapeMode() {
+    if (window.innerHeight < window.innerWidth && window.innerWidth < 768) {
       this.landscapeMode = true;
-    }else{
+    } else {
       this.landscapeMode = false;
     }
   }

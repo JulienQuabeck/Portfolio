@@ -20,12 +20,15 @@ export class PrivacyPolicyComponent {
     window.addEventListener('resize', () => this.checkLandscapeMode());
     window.addEventListener('orientationchange', () => this.checkLandscapeMode());
     document.addEventListener('DOMContentLoaded', () => this.checkLandscapeMode());
-}
+  }
 
-  checkLandscapeMode(){
-    if(window.innerHeight < window.innerWidth && window.innerWidth < 768){
+  /**
+  * This function checks, if the mobile device is in langsacpe mode, if yes it will display an information to turn the device
+  */
+  checkLandscapeMode() {
+    if (window.innerHeight < window.innerWidth && window.innerWidth < 768) {
       this.landscapeMode = true;
-    }else{
+    } else {
       this.landscapeMode = false;
     }
   }

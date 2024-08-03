@@ -12,29 +12,36 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 //ViewChild, ElementRef
 
 export class HeaderComponent {
-//implements AfterViewInit
+
+  burgerMenuClosed = true;
+  language = 'english';
+
+  //implements AfterViewInit
   private translateService = inject(TranslateService);
 
   ngOnInit(): void {
     const defaultLang = localStorage.getItem('language') || 'en';
     this.translateService.setDefaultLang(defaultLang);
-    this.translateService.use(defaultLang);  
+    this.translateService.use(defaultLang);
   }
 
-  changeLanguage(){
+  /**
+   * This function changes the language after clicking on the language flag in the header component and changes the language
+   */
+  changeLanguage() {
     let language = localStorage.getItem('language') || 'en';
-    if(language == 'en'){
+    if (language == 'en') {
       language = 'de';
-    }else{
+    } else {
       language = 'en';
     }
     this.translateService.use(language);
     localStorage.setItem('language', language);
   }
 
-  burgerMenuClosed = true;
-  language = 'english';
-
+  /**
+   * This function opens/closes the burger menu depending on whether it is already open or not
+   */
   openBurgerMenu() {
     if (this.burgerMenuClosed == true) {
       this.burgerMenuClosed = false;
@@ -42,38 +49,5 @@ export class HeaderComponent {
       this.burgerMenuClosed = true;
     }
   }
-
-
-  // @ViewChild('self-presentation', { static: false }) section1!: ElementRef;
-  // @ViewChild('skillset', { static: false }) section2!: ElementRef;
-  // @ViewChild('mywork', { static: false }) section3!: ElementRef;
-  // @ViewChild('contact', { static: false }) section4!: ElementRef;
-
-  // ngAfterViewInit() {
-  //   // ViewChilds sind nun initialisiert
-  // }
-
-  // scrollToSection(sectionId: string): void {
-  //   const sectionMap: { [key: string]: ElementRef } = {
-  //     section1: this.section1,
-  //     section2: this.section2,
-  //     section3: this.section3,
-  //     section4: this.section4
-  //   };
-
-  //   const element = sectionMap[sectionId]?.nativeElement;
-  //   if (element) {
-  //     const headerOffset = 117; // Höhe des Headers
-  //     const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-  //     const offsetPosition = elementPosition - headerOffset;
-
-  //     window.scrollTo({
-  //       top: offsetPosition,
-  //     });
-  //   }
-  // }
-
-
-
 
 }

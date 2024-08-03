@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -8,8 +8,4 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './self-presentation.component.html',
   styleUrl: './self-presentation.component.scss'
 })
-export class SelfPresentationComponent {
-
-@Input() language = '';
-
-}
+export class SelfPresentationComponent {}

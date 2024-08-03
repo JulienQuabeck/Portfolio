@@ -22,10 +22,12 @@ export class ImprintComponent {
     document.addEventListener('DOMContentLoaded', () => this.checkLandscapeMode());
 }
 
+/**
+ * This function checks, if the mobile device is in langsacpe mode, if yes it will display an information to turn the device
+ */
   checkLandscapeMode(){
     if(window.innerHeight < window.innerWidth && window.innerWidth < 768){
       this.landscapeMode = true;
-      debugger
     }else{
       this.landscapeMode = false;
     }

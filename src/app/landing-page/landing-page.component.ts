@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { SocialMediaComponent } from '../shared/social-media/social-media.component';
 import { TranslateModule } from '@ngx-translate/core';
@@ -10,23 +10,4 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
-export class LandingPageComponent {
-
-  @Output() sentlanguage = new EventEmitter;
-
-  language = 'english';
-
-  switchLanguage() {
-    if(this.language == 'english'){
-      this.language = 'german';
-    }else{
-      this.language = 'english';
-    }
-    this.sendLanguageToParent();
-  }
-
-  sendLanguageToParent() {
-    this.sentlanguage.emit();
-  }
-
-}
+export class LandingPageComponent {}

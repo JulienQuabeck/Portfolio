@@ -7,6 +7,4 @@ import { Component } from '@angular/core';
   templateUrl: './social-media.component.html',
   styleUrl: './social-media.component.scss'
 })
-export class SocialMediaComponent {
-
-}
+export class SocialMediaComponent {}
