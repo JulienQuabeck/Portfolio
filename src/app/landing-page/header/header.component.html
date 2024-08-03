@@ -19,11 +19,11 @@
                         (click)="openBurgerMenu()">
                 </div>
                 <div class="burger-menu-links">
-                    <a href="#self-presentation">{{'header_AboutMe' | translate }}</a>
-                    <a href="#skillset">{{'header_Skills' | translate }}</a>
-                    <a href="#mywork">{{'header_Work' | translate }}</a>
-                    <a href="#contact">{{'header_Contact' | translate }}</a>
-                    <div (click)="changeLanguage()"><img class="language" src="{{'header_Flag'| translate}}"></div>
+                    <a (click)="openBurgerMenu()" href="#self-presentation">{{'header_AboutMe' | translate }}</a>
+                    <a (click)="openBurgerMenu()" href="#skillset">{{'header_Skills' | translate }}</a>
+                    <a (click)="openBurgerMenu()" href="#mywork">{{'header_Work' | translate }}</a>
+                    <a (click)="openBurgerMenu()" href="#contact">{{'header_Contact' | translate }}</a>
+                    <div (click)="changeLanguage(); openBurgerMenu()"><img class="language" src="{{'header_Flag'| translate}}"></div>
                 </div>
             </div>
         </div>
