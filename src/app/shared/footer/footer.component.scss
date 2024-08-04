@@ -7,7 +7,7 @@ section {
 
     .content {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         width: 100%;
         max-width: 1920px;
@@ -54,6 +54,7 @@ section {
     display: flex;
     flex-direction: row;
     gap: 30px;
+    margin-right:36px;
 
     img {
         width: 30px;
@@ -72,6 +73,7 @@ section {
 .logo {
     margin-top: 20px;
     width: 200px;
+    margin-left:36px;
 }
 
 @media(max-width:600px) {

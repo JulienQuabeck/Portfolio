@@ -25,7 +25,7 @@ section {
         ul {
             list-style: none;
             display: flex;
-            gap: 36px;
+            gap: 0px;
             margin-right: 36px;
 
             &:hover {
@@ -96,7 +96,6 @@ section {
         justify-content: flex-end;
         align-items: center;
         position: absolute;
-        padding-right: 20px;
         padding-top: 10px;
         right: 0;
         z-index: 999;
@@ -111,6 +110,7 @@ section {
             width: 50px !important;
             height: 30px !important;
             margin-top:15px;
+            padding-right:36px;
         }
 
         div {
@@ -126,6 +126,7 @@ section {
             img {
                 width: 32px;
                 height: 31px;
+                padding-right: 20px;
             }
 
             a {
@@ -134,6 +135,7 @@ section {
                 text-decoration: none;
                 color: #5988FF;
                 margin-left: 5px;
+                padding-right: 20px;
 
                 &:hover {
                     font-weight: bolder;
