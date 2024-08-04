@@ -40,6 +40,7 @@ section {
     top:10%;
     left:10%;
     opacity: 0.4;
+    animation: scaleAnimation 4s infinite linear;
 }
 
 .ellipse2{
@@ -49,6 +50,8 @@ section {
     bottom:10%;
     right:30%;
     opacity: 0.4;
+    animation: scaleAnimation 4s infinite linear;
+    animation-delay:1s;
 }
 
 .ellipse3{
@@ -58,6 +61,8 @@ section {
     top:30%;
     right:20%;
     opacity: 0.4;
+    animation: scaleAnimation 4s infinite linear;
+    animation-delay:2s;
 }
 
 app-header{

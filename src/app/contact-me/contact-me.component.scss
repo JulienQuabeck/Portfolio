@@ -212,6 +212,8 @@ section {
     top: 400px;
     left: 242px;
     opacity: 0.4;
+    animation: scaleAnimation 4s infinite linear;
+    animation-delay:1s;
 }
 
 .ellipse2 {
@@ -222,6 +224,8 @@ section {
     top: 700px;
     right: 150px;
     opacity: 0.4;
+    animation: scaleAnimation 4s infinite linear;
+    animation-delay:2s;
 }
 
 .ellipse3 {
@@ -231,6 +235,8 @@ section {
     top: 700px;
     left: 31px;
     opacity:0.4;
+    animation: scaleAnimation 4s infinite linear;
+    animation-delay:3s;
 
     &:hover {
         cursor: pointer;

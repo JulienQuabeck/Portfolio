@@ -18,6 +18,7 @@
     height: 892px;
     top: -71px;
     left: -199px;
+    animation: scaleAnimation 4s infinite linear;
 }
 
 .ellipseBottomFromLandingPage {
@@ -26,6 +27,8 @@
     height: 206px;
     bottom: -103px;
     left: 50%;
+    animation: scaleAnimation 4s infinite linear;
+    animation-delay:1s;
 }
 
 app-header {

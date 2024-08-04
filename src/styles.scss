@@ -213,3 +213,15 @@
     display: block;
     visibility: hidden;
 }
+
+@keyframes scaleAnimation {
+  0%{
+    scale: 1.0;
+  }
+  50%{
+    scale:0.8;
+  }
+  100%{
+    scale:1.0;
+  }
+}

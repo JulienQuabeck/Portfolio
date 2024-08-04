@@ -78,6 +78,7 @@ section {
     left: 75%;
     top: 15%;
     opacity:0.4;
+    animation: scaleAnimation 4s infinite linear;
 }
 
 @media(max-width:1245px){

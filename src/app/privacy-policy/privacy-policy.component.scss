@@ -32,6 +32,7 @@ section {
     opacity: 0.5;
     z-index: 100;
     opacity: 0.4;
+    animation: scaleAnimation 4s infinite linear;
 }
 
 .ellipse1 {
@@ -40,6 +41,8 @@ section {
     top: 5%;
     left: 10%;
     opacity: 0.4;
+    animation: scaleAnimation 4s infinite linear;
+    animation-delay:1s;
 }
 
 .ellipse2 {
@@ -48,6 +51,8 @@ section {
     top: 750px;
     left: 80%;
     opacity: 0.4;
+    animation: scaleAnimation 4s infinite linear;
+    animation-delay:2s;
 }
 
 .ellipse3 {
@@ -56,6 +61,8 @@ section {
     top: 1150px;
     left: 30%;
     opacity: 0.4;
+    animation: scaleAnimation 4s infinite linear;
+    animation-delay:3s;
 }
 
 .ellipse4 {
@@ -64,6 +71,7 @@ section {
     top: 1300px;
     left: 60%;
     opacity: 0.4;
+    animation: scaleAnimation 4s infinite linear;
 }
 
 .ellipse5 {
@@ -72,6 +80,8 @@ section {
     top: 1700px;
     left: 10%;
     opacity: 0.4;
+    animation: scaleAnimation 4s infinite linear;
+    animation-delay:1s;
 }
 
 .ellipse6 {
@@ -80,6 +90,8 @@ section {
     top: 2050px;
     left: 40%;
     opacity: 0.4;
+    animation: scaleAnimation 4s infinite linear;
+    animation-delay:2s;
 }
 
 app-footer{
